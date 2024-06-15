@@ -40,14 +40,14 @@ class Page implements Base {
 
 const Pages: (Page | Folder)[] = [
   {
-    name: "Home",
+    name: "HOME",
     title: "Home",
     path: "/",
     component: Home,
     lead: "Welcome to iGEM 2024! Your team has been approved and you are ready to start the iGEM season!",
   },
   {
-    name: "Project",
+    name: "PROJECT",
     folder: [
       {
         name: "Contribution",
@@ -94,14 +94,14 @@ const Pages: (Page | Folder)[] = [
     ],
   },  
   {
-    name: "Human Practices",
+    name: "HUMAN PRACTICES",
     title: "Human Practices",
     path: "/human-practices",
     component: HumanPractices,
     lead: "We ask every team to think deeply and creatively about whether their project is responsible and good for the world. Consider how the world affects your work and how your work affects the world.",
   },
   {
-    name: "Team",
+    name: "TEAM",
     folder: [
       {
         name: "Team",
@@ -120,7 +120,7 @@ const Pages: (Page | Folder)[] = [
     ],
   },
   {
-    name: "Safety",
+    name: "SAFETY",
     title: "Safety",
     path: "/safety",
     component: Safety,
