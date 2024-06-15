@@ -10,14 +10,17 @@ import Pages from "../pages.ts";
 export function Navbar({ itemSpacing = "10px" }: { itemSpacing?: string }) {
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
   const [hoverItem, setHoverItem] = useState<number | null>(null);
+  const [showDropdown, setShowDropdown] = useState<boolean>(false);
 
   const handleMouseEnter = (index: number) => {
     setHoverIndex(index);
+    setShowDropdown(true);
   };
 
   const handleMouseLeave = () => {
     setHoverIndex(null);
     setHoverItem(null); // Reset hoverItem when mouse leaves the dropdown item
+    setShowDropdown(false);
   };
 
   const handleItemMouseEnter = (index: number) => {
@@ -41,12 +44,13 @@ export function Navbar({ itemSpacing = "10px" }: { itemSpacing?: string }) {
                 margin: "0",
                 fontWeight: "bold",
                 padding: "5px 15px",
-                background: "#8976ec",
                 borderRadius: "10px",
+                background: "#8976ec",
                 color:
                   hoverIndex === pageIndex && hoverItem === subpageIndex
-                    ? "#ff0000"
+                    ? "#ff00ff"
                     : "white", // Change font color only when both conditions are met
+                transition: "color 0.3s ease-in-out", // Add transition for color change
               }}
               onMouseEnter={() => handleItemMouseEnter(subpageIndex)}
               onMouseLeave={handleItemMouseLeave}
@@ -63,13 +67,17 @@ export function Navbar({ itemSpacing = "10px" }: { itemSpacing?: string }) {
           key={`page-${pageIndex}`}
           title={item.name}
           id={`basic-nav-dropdown-${pageIndex}`}
-          show={hoverIndex === pageIndex}
+          show={showDropdown && hoverIndex === pageIndex} // Show dropdown when showDropdown and hoverIndex match
           onMouseEnter={() => handleMouseEnter(pageIndex)}
           onMouseLeave={handleMouseLeave}
           style={{
             margin: "5px 0",
             fontWeight: "bold",
             position: "relative",
+            opacity : showDropdown && hoverIndex === pageIndex ? 1 : 0,
+            transition : "opacity 1s ease-in-out",
+
+
           }}
         >
           <div
@@ -83,6 +91,8 @@ export function Navbar({ itemSpacing = "10px" }: { itemSpacing?: string }) {
               left: "50%",
               transform: "translateX(-50%)",
               margin: "-15px 0",
+              //opacity : showDropdown && hoverIndex === pageIndex ? 1 : 0,
+              //transition : "opacity 1s ease-in-out",
             }}
           >
             {folderItems}

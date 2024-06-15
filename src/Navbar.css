@@ -1,6 +1,5 @@
-/* styles.css */
 .custom-dropdown-menu {
   background-color: #8976ec !important;
-  border: none; /* Remove any border if present */
-  padding: 0; /* Remove any padding */
+  border: none;
+  padding: 0;
 }
