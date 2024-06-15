@@ -6,6 +6,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "react-router-dom";
 import Image from "react-bootstrap/Image";
 import Pages from "../pages.ts";
+import styles from '../Navbar.css'; // Use .module.css extension for CSS modules
 
 export function Navbar({ itemSpacing = "10px" }: { itemSpacing?: string }) {
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
@@ -63,41 +64,38 @@ export function Navbar({ itemSpacing = "10px" }: { itemSpacing?: string }) {
       });
 
       return (
-        <NavDropdown
-          key={`page-${pageIndex}`}
-          title={item.name}
-          id={`basic-nav-dropdown-${pageIndex}`}
-          show={showDropdown && hoverIndex === pageIndex} // Show dropdown when showDropdown and hoverIndex match
-          onMouseEnter={() => handleMouseEnter(pageIndex)}
-          onMouseLeave={handleMouseLeave}
-          style={{
-            margin: "5px 0",
-            fontWeight: "bold",
-            position: "relative",
-            opacity : showDropdown && hoverIndex === pageIndex ? 1 : 0,
-            transition : "opacity 1s ease-in-out",
+<NavDropdown
+  key={`page-${pageIndex}`}
+  title={item.name}
+  id={`basic-nav-dropdown-${pageIndex}`}
+  show={showDropdown && hoverIndex === pageIndex} // Show dropdown when showDropdown and hoverIndex match
+  onMouseEnter={() => handleMouseEnter(pageIndex)}
+  onMouseLeave={handleMouseLeave}
+  style={{
+    margin: "5px 0",
+    fontWeight: "bold",
+    position: "relative",
+    transition: "opacity 0.3s ease-in-out", // Correct the transition duration
+  }}
+>
+  <div
+    style={{
+      display: showDropdown && hoverIndex === pageIndex ? "flex" : "none", // Toggle display property
+      borderRadius: "10px",
+      background: "#8976ec",
+      padding: "0px 0",
+      position: "absolute",
+      left: "50%",
+      transform: "translateX(-50%)",
+      margin: "-15px 0",
+      opacity: showDropdown && hoverIndex === pageIndex ? 1 : 0,
+      transition: "opacity 0.3s ease-in-out", // Correct the transition duration
+    }}
+  >
+    {folderItems}
+  </div>
+</NavDropdown>
 
-
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              height: "",
-              borderRadius: "10px",
-              background: "#8976ec",
-              padding: "0px 0",
-              position: "absolute",
-              left: "50%",
-              transform: "translateX(-50%)",
-              margin: "-15px 0",
-              //opacity : showDropdown && hoverIndex === pageIndex ? 1 : 0,
-              //transition : "opacity 1s ease-in-out",
-            }}
-          >
-            {folderItems}
-          </div>
-        </NavDropdown>
       );
     } else if ("path" in item && item.path) {
       return (
