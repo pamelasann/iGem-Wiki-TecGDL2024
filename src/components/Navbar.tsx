@@ -6,7 +6,6 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "react-router-dom";
 import Image from "react-bootstrap/Image";
 import Pages from "../pages.ts";
-import styles from '../Navbar.css'; // Use .module.css extension for CSS modules
 
 export function Navbar({ itemSpacing = "10px" }: { itemSpacing?: string }) {
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
@@ -45,7 +44,7 @@ export function Navbar({ itemSpacing = "10px" }: { itemSpacing?: string }) {
                 margin: "0",
                 fontWeight: "bold",
                 padding: "5px 15px",
-                borderRadius: "10px",
+                borderRadius: "25px",
                 background: "#8976ec",
                 color:
                   hoverIndex === pageIndex && hoverItem === subpageIndex
@@ -81,8 +80,9 @@ export function Navbar({ itemSpacing = "10px" }: { itemSpacing?: string }) {
   <div
     style={{
       display: showDropdown && hoverIndex === pageIndex ? "flex" : "none", // Toggle display property
-      borderRadius: "10px",
+      borderRadius: "100px",
       background: "#8976ec",
+      fontSize : "12px",
       padding: "0px 0",
       position: "absolute",
       left: "50%",
