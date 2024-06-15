@@ -1,0 +1,47 @@
+[33mcommit df9f1f65ecec9d9b3619d7d44e99df8ffa9e5522[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mSecondaryBranch[m[33m)[m
+Author: Andres Benjamin Antelis Moreno <bantelis10@gmail.com>
+Date:   Sat Jun 15 12:47:33 2024 -0600
+
+    Almost done with navbar
+
+[33mcommit df3121052071aebfb466737aaf484763cfcecb9a[m
+Author: Andres Benjamin Antelis Moreno <bantelis10@gmail.com>
+Date:   Fri Jun 14 23:21:58 2024 -0600
+
+    Why cant i create a css file plz help
+
+[33mcommit c285daf250647153f8a11b0c23ec02fbf6f0fabd[m
+Author: Andres Benjamin Antelis Moreno <bantelis10@gmail.com>
+Date:   Fri Jun 14 18:12:01 2024 -0600
+
+    Modified Navbar Pages
+
+[33mcommit 7cc5d0453c4a9e8c2b04c8adafae1665ef911879[m[33m ([m[1;31morigin/SecondaryBranch[m[33m)[m
+Author: Andres Benjamin Antelis Moreno <bantelis10@gmail.com>
+Date:   Wed Jun 12 13:51:16 2024 -0600
+
+    Trasg commit
+
+[33mcommit 774708f064cb603a5cd34ca474fc99684137f848[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: Pamela Sanchez <118239775+pamelasann@users.noreply.github.com>
+Date:   Wed Jun 12 13:48:58 2024 -0600
+
+    Create .gitignore
+
+[33mcommit 4ac66f269f6edb281ba16ea1c8a2b6943d2c3ebd[m
+Author: Pamela Sanchez <pamela.sann@hotmail.com>
+Date:   Wed Jun 12 13:31:03 2024 -0600
+
+    Added template from gitlab igem page
+
+[33mcommit 5dfaf350b56b9de64a6f656c4ac236554b744bc0[m
+Author: Pamela Sanchez <pamela.sann@hotmail.com>
+Date:   Tue Jun 11 14:53:13 2024 -0600
+
+    Added template for PL, issues and added the background base code
+
+[33mcommit 0eae7f751cc9755c4262f09049a1f9234bb0d291[m
+Author: Pamela Sanchez <118239775+pamelasann@users.noreply.github.com>
+Date:   Tue Jun 11 14:41:47 2024 -0600
+
+    Initial commit

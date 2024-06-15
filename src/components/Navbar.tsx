@@ -9,6 +9,7 @@ import Pages from "../pages.ts";
 
 export function Navbar({ itemSpacing = "10px" }: { itemSpacing?: string }) {
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
+  const [hoverItem, setHoverItem] = useState<number | null>(null);
 
   const handleMouseEnter = (index: number) => {
     setHoverIndex(index);
@@ -16,6 +17,15 @@ export function Navbar({ itemSpacing = "10px" }: { itemSpacing?: string }) {
 
   const handleMouseLeave = () => {
     setHoverIndex(null);
+    setHoverItem(null); // Reset hoverItem when mouse leaves the dropdown item
+  };
+
+  const handleItemMouseEnter = (index: number) => {
+    setHoverItem(index);
+  };
+
+  const handleItemMouseLeave = () => {
+    setHoverItem(null);
   };
 
   const pages = Pages.map((item, pageIndex) => {
@@ -28,12 +38,18 @@ export function Navbar({ itemSpacing = "10px" }: { itemSpacing?: string }) {
               as={Link}
               to={subpage.path}
               style={{
-                margin: `0 ${itemSpacing}`,
+                margin: "0",
                 fontWeight: "bold",
-                color: "white",
-                padding: "10px 20px",
-                
+                padding: "5px 15px",
+                background: "#8976ec",
+                borderRadius: "10px",
+                color:
+                  hoverIndex === pageIndex && hoverItem === subpageIndex
+                    ? "#ff0000"
+                    : "white", // Change font color only when both conditions are met
               }}
+              onMouseEnter={() => handleItemMouseEnter(subpageIndex)}
+              onMouseLeave={handleItemMouseLeave}
             >
               {subpage.name}
             </NavDropdown.Item>
@@ -50,21 +66,23 @@ export function Navbar({ itemSpacing = "10px" }: { itemSpacing?: string }) {
           show={hoverIndex === pageIndex}
           onMouseEnter={() => handleMouseEnter(pageIndex)}
           onMouseLeave={handleMouseLeave}
-          style={{ 
-            margin: "5px 0", 
+          style={{
+            margin: "5px 0",
             fontWeight: "bold",
-            position: "relative"
+            position: "relative",
           }}
         >
           <div
             style={{
               display: "flex",
+              height: "",
+              borderRadius: "10px",
               background: "#8976ec",
-              padding: "0 0",
+              padding: "0px 0",
               position: "absolute",
-              left: "50%",   // Centers the dropdown menu
-              transform: "translateX(-50%)",  // Adjusts the position to the center
-              margin: "-10px 0" //I cheesed this so hard omg
+              left: "50%",
+              transform: "translateX(-50%)",
+              margin: "-15px 0",
             }}
           >
             {folderItems}
@@ -77,7 +95,10 @@ export function Navbar({ itemSpacing = "10px" }: { itemSpacing?: string }) {
           key={`page-${pageIndex}`}
           as={Link}
           to={item.path}
-          style={{ margin: "5px 50px", fontWeight: "bold" }}
+          style={{
+            margin: "5px 0",
+            fontWeight: "bold",
+          }}
         >
           {item.name}
         </Nav.Link>
