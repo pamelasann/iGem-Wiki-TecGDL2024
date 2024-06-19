@@ -1,4 +1,6 @@
+import React from "react";
 import { stringToSlug } from "../utils";
+//import "./footer.css"; //fk this erros
 
 export function Footer() {
   const teamYear = import.meta.env.VITE_TEAM_YEAR;
@@ -6,74 +8,98 @@ export function Footer() {
   const teamSlug = stringToSlug(teamName);
 
   return (
-    <footer className="pt-5 pb-5 footer py-5 mt-5 bg-dark text-white">
-      <div className="container">
+    <footer style={{ background: "#e6e5e5",  }} className="footer text-white py-5 mt-5">
+      <div className="container-fluid">
         <div className="row mb-4">
-          <div className="col-lg-6 col-xs-12">
-            <h4 className="mb-3">Heading</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac
-              ante mollis quam tristique convallis
-            </p>
+          {}
+          <div className="col-lg-4 col-12 d-flex align-items-left">
+            <img
+              src="src/Logo.png"
+              alt="Team Logo"
+              style={{ width: 100, height: 100, marginRight: -5, position: 'relative', top: '-25px' }}
+            />
+            <div
+              style={{
+                color: "#7975d5",
+                fontWeight: "bold",
+                marginRight: 0,
+                fontSize: "24px",
+              }}
+            >
+              NEOTECH-
+            </div>
+            <div style={{ color: "#82d9b9", fontWeight: "bold", fontSize: "24px" }}>
+              E
+            </div>
           </div>
-          <div className="col-lg-3 col-xs-12">
-            <h4 className="mt-lg-0 mt-sm-3">Links</h4>
-            <ul className="m-2 p-2">
+          {/* Middle column */}
+          <div className="col-lg-2 col-6">
+            <h4 className="mt-lg-0 mt-3">MENU</h4>
+            <ul className="list-unstyled m-2 p-2">
               <li>
-                <a href="#">Lorem ipsum</a>
+                <a href="#">HOME</a>
               </li>
               <li>
-                <a href="#">Nam mauris velit</a>
+                <a href="#">PROJECT</a>
               </li>
               <li>
-                <a href="#">Etiam vitae mauris</a>
+                <a href="#">HUMAN PRACTICES</a>
               </li>
               <li>
-                <a href="#">Fusce scelerisque</a>
+                <a href="#">TEAM</a>
               </li>
               <li>
-                <a href="#">Sed faucibus</a>
-              </li>
-              <li>
-                <a href="#">Mauris efficitur nulla</a>
+                <a href="#">SAFETY</a>
               </li>
             </ul>
           </div>
-          <div className="col-lg-3 col-xs-12">
-            <h4 className="mt-lg-0 mt-sm-4 mb-3">Contact</h4>
-            <p>22, Lorem ipsum dolor, consectetur adipiscing</p>
-            <p className="mb-0">(541) 754-3010</p>
-            <p>info@hsdf.com</p>
+          {}
+          <div className="col-lg-2 col-11">
+            <h4 className="mt-lg-0 mt-4 mb-3">LOCATION</h4>
+            <p> Jalisco, Mexico</p>
+
+          </div>
+          <div className="col-lg-3 col-12">
+            <h4 className="mt-lg-0 mt-4 mb-3">FOLLOW US!</h4>
+
           </div>
         </div>
+        {}
         <hr />
-        {/* The following MUST be on every page: license information and link to the repository on gitlab.igem.org */}
-        <div className="row mt-4">
-          <div className="col">
-            <p className="mb-0">
-              <small>
-                © 2024 - Content on this site is licensed under a{" "}
-                <a
-                  className="subfoot"
-                  href="https://creativecommons.org/licenses/by/4.0/"
-                  rel="license"
-                >
+        <div style={{ background: "#231f20", width: '102%' }} className="row mt-4">
+        <div className="col d-flex justify-content-between">
+          <p className="d-flex justify-content-between w-100 align-items-center" style={{ marginTop: '15px' }}>
+            <small className="text-start">
+              2024 {teamYear} - Licensed under{" "}
+              <a
+                className="subfoot"
+                href="https://creativecommons.org/licenses/by/4.0/"
+                rel="license"
+                style={{ textDecoration: 'underline' }}
+              >
+                <span style={{ fontWeight: 'normal' }}>
                   Creative Commons Attribution 4.0 International license
+                </span>
+              </a>
+              .
+            </small>
+            <small className="text-end">
+              <span style={{ fontWeight: 'normal' }}>
+                Source code available{" "}
+                <a href={`https://gitlab.igem.org/2024/tecmonterreygdl/`} style={{ textDecoration: 'underline' }}>
+                  here
                 </a>
-                .
-              </small>
-            </p>
-            <p>
-              <small>
-                The repository used to create this website is available at{" "}
-                <a href={`https://gitlab.igem.org/${teamYear}/${teamSlug}`}>
-                  gitlab.igem.org/{teamYear}/{teamSlug}
-                </a>
-                .
-              </small>
-            </p>
-          </div>
-        </div>
+              </span>
+              .
+            </small>
+          </p>
+  </div>
+</div>
+
+
+
+
+
       </div>
     </footer>
   );
