@@ -33,8 +33,17 @@ export function Footer() {
             <div style={{ color: "#82d9b9", fontWeight: "bold", fontSize: "24px", marginTop: '15px' }}>
               E
             </div>
+            
           </div>
-
+          <div style={{ marginTop: '-50px', marginLeft: '20px' }}>
+              <a href="https://tec.mx">
+                <img
+                  src="src/images/tecc.png"
+                  alt="RAYO EMPRENDEDOR"
+                  style={{ width: '300px', height: 'auto', marginTop: '10px' }}
+                />
+              </a>
+            </div>
 
         </div>
           
@@ -104,23 +113,6 @@ export function Footer() {
 
         </div>
         {}
-        <div className="mt-1 d-flex justify-content-center align-items-center" style={{marginTop: '-100px'}}>
-                <a href="https://snapgene.com">
-            </a>
-            <a href="https://lagranlucha.mx">
-            </a>
-            <div className="d-flex justify-content-center align-items-center mt-3">
-        <a href="https://tec.mx">
-            <img
-                src="src/images/tecc.png"
-                alt="RAYO EMPRENDEDOR"
-                style={{ width: '300px', height: 'auto'}}
-            />
-        </a>
-    </div>
-            <a href="https://promega.com">
-            </a>
-          </div>
         <hr />
         <div style={{ background: "#231f20", width: '102%' }} className="row mt-4">
         <div className="col d-flex justify-content-between">
