@@ -40,33 +40,14 @@ class Page implements Base {
 
 const Pages: (Page | Folder)[] = [
   {
-    name: "Home",
+    name: "HOME",
     title: "Home",
     path: "/",
     component: Home,
     lead: "Welcome to iGEM 2024! Your team has been approved and you are ready to start the iGEM season!",
   },
   {
-    name: "Team",
-    folder: [
-      {
-        name: "Team",
-        title: "Team",
-        path: "/team",
-        component: Team,
-        lead: "On this page you can introduce your team members, instructors, and advisors.",
-      },
-      {
-        name: "Attributions",
-        title: "Attributions",
-        path: "/attributions",
-        component: Attributions,
-        lead: "In the iGEM Competition, we celebrate student effort and achievement. The Attributions form helps the judges differentiate between what students accomplished from how their external collaborators supported them. Therefore, teams must clearly explain on the standard Project Attributions form what work they have conducted by themselves and what has been done by others.",
-      },
-    ],
-  },
-  {
-    name: "Project",
+    name: "PROJECT",
     folder: [
       {
         name: "Contribution",
@@ -111,21 +92,41 @@ const Pages: (Page | Folder)[] = [
         lead: "You can describe the results of your project and your future plans here.",
       },
     ],
-  },
+  },  
   {
-    name: "Safety",
-    title: "Safety",
-    path: "/safety",
-    component: Safety,
-    lead: "Describe all the safety issues of your project.",
-  },
-  {
-    name: "Human Practices",
+    name: "HUMAN PRACTICES",
     title: "Human Practices",
     path: "/human-practices",
     component: HumanPractices,
     lead: "We ask every team to think deeply and creatively about whether their project is responsible and good for the world. Consider how the world affects your work and how your work affects the world.",
   },
+  {
+    name: "TEAM",
+    folder: [
+      {
+        name: "Team",
+        title: "Team",
+        path: "/team",
+        component: Team,
+        lead: "On this page you can introduce your team members, instructors, and advisors.",
+      },
+      {
+        name: "Attributions",
+        title: "Attributions",
+        path: "/attributions",
+        component: Attributions,
+        lead: "In the iGEM Competition, we celebrate student effort and achievement. The Attributions form helps the judges differentiate between what students accomplished from how their external collaborators supported them. Therefore, teams must clearly explain on the standard Project Attributions form what work they have conducted by themselves and what has been done by others.",
+      },
+    ],
+  },
+  {
+    name: "SAFETY",
+    title: "Safety",
+    path: "/safety",
+    component: Safety,
+    lead: "Describe all the safety issues of your project.",
+  },
+/* a 
   {
     name: "Awards",
     folder: [
@@ -193,7 +194,7 @@ const Pages: (Page | Folder)[] = [
         lead: "Describe how you have evaluated your project ideas against one or more of the SDGs.",
       },
     ],
-  },
+  },*/
 ];
 
 export default Pages;
