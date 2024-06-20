@@ -1,0 +1,58 @@
+.no-scroll {
+    overflow: hidden;
+}
+
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -15;
+}
+
+.background .bg-img {
+    background-image: url("https://static.igem.wiki/teams/4495/wiki/images/background.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#gradient-canvas {
+    width: 100%;
+    height: 100%;
+    --gradient-color-1: #9fdec7;
+    --gradient-color-2: #9490da;
+    --gradient-color-3: #f1faee;
+    --gradient-color-4: #ffffff;
+}
+
+.white-blur-overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 1; /* make sure it's above other elements */
+  }
+
+@media (max-width: 992px) {
+    #gradient-canvas {
+        display: none;
+    }
+}

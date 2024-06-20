@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import { Footer, Header, Navbar, NotFound } from "../../components";
 import { getPathMapping, stringToSlug } from "../../utils";
 import { useEffect } from "react";
+import Layout from '../../components/Layout';
 
 const App = () => {
   const pathMapping = getPathMapping();
@@ -26,36 +27,38 @@ const App = () => {
       <Navbar />
 
       {/* Header and PageContent */}
-      <Routes>
-        {Object.entries(pathMapping).map(
-          ([path, { title, lead, component: Component }]) => (
-            <Route
-              key={path}
-              path={path}
-              element={
-                <>
-                  <Header title={title || ""} lead={lead || ""} />
-                  <div className="container">
-                    <Component />
-                  </div>
-                </>
-              }
-            />
-          ),
-        )}
-        <Route
-          path="*"
-          element={
-            <>
-              <Header
-                title="Not Found"
-                lead="The requested URL was not found on this server."
+      <Layout>
+        <Routes>
+          {Object.entries(pathMapping).map(
+            ([path, { title, lead, component: Component }]) => (
+              <Route
+                key={path}
+                path={path}
+                element={
+                  <>
+                    <Header title={title || ""} lead={lead || ""} />
+                    <div className="container main-container">
+                      <Component />
+                    </div>
+                  </>
+                }
               />
-              <NotFound />
-            </>
-          }
-        />
-      </Routes>
+            ),
+          )}
+          <Route
+            path="*"
+            element={
+              <>
+                <Header
+                  title="Not Found"
+                  lead="The requested URL was not found on this server."
+                />
+                <NotFound />
+              </>
+            }
+          />
+        </Routes>
+      </Layout>
 
       {/* Footer */}
       {/* MUST mention license AND have a link to team wiki's repository on gitlab.igem.org */}

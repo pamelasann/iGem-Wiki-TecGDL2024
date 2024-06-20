@@ -1,0 +1,58 @@
+.main-container {
+    width: 100%;
+    max-width: none;
+}
+
+#header-container {
+    background-image: url('https://static.igem.wiki/teams/4594/wiki/imp-static/desc-image1.png');
+    height: 600px;
+}
+
+#header-title {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 6.5em;
+}
+
+#menu-container {
+    font-family: Helvetica, Verdana, Arial, sans-serif;
+    font-size: 1.5em;
+    font-weight: 200;
+    padding-left: 20px;
+}
+
+#menu-container a {
+    text-decoration: none;
+    color: rgb(131, 131, 131);
+}
+
+#menu-container a:hover {
+    text-decoration: none;
+    color: rgb(185, 185, 185);
+}
+
+#titles-container {
+    position: sticky;
+    top: 0;
+    padding-top: 2em;
+}
+
+#text-content {
+    box-shadow: 0px 0px 30px 20px rgb(189, 189, 217);
+}
+
+#text-content h1 {
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    font-size: 3em;
+    padding-bottom: 0.7em;
+}
+
+#text-content h2 {
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    font-size: 2em;
+    padding-bottom: 0.3em;
+}
+
+#text-content p {
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    font-size: 1.2em;
+}
