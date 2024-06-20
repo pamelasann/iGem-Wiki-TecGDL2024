@@ -106,32 +106,19 @@ export function Footer() {
         {}
         <div className="mt-1 d-flex justify-content-center align-items-center" style={{marginTop: '-100px'}}>
                 <a href="https://snapgene.com">
-              <img
-                src="src/images/snapgenes.png"
-                alt="SnapGenes"
-                style={{ width: '300px', height: 'auto', marginRight: '10px'}}
-              />
             </a>
             <a href="https://lagranlucha.mx">
-              <img
-                src="src/images/burgir.png"
-                alt="La gran lucha"
-                style={{ width: '100px', height: 'auto', marginRight: '40px'}}
-              />
             </a>
-            <a href="https://tec.mx">
-              <img
+            <div className="d-flex justify-content-center align-items-center mt-3">
+        <a href="https://tec.mx">
+            <img
                 src="src/images/tecc.png"
                 alt="RAYO EMPRENDEDOR"
-                style={{ width: '300px', height: 'auto', marginRight: '40px'}}
-              />
-            </a>
-            <a href="https://promega.com">
-              <img
-                src="src/images/promega.png"
-                alt="Promega"
                 style={{ width: '300px', height: 'auto'}}
-              />
+            />
+        </a>
+    </div>
+            <a href="https://promega.com">
             </a>
           </div>
         <hr />
