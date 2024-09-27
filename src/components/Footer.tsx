@@ -7,57 +7,23 @@ export function Footer() {
   const teamSlug = stringToSlug(teamName);
 
   return (
-    <footer style={{ background: "#e6e5e5",  }} className="footer">
-      <div className="container-fluid p-4 pt-5">
+    <footer className="footer">
+      <div className="container-fluid p-4 pt-5" id="main-container">
         <div className="row">
-          <div className="col-lg-3 col-12 d-flex flex-column align-items-start">
-          <div className="d-flex align-items-center">
-            <img
-              src="https://static.igem.wiki/teams/5439/logo.png"
-              alt="Neotech-e"
-              style={{ width: 150, height: 150, marginRight: 1, position: 'relative' }}
-            />
-            <div
-              style={{
-                color: "#7975d5",
-                fontWeight: "bold",
-                marginRight: 0,
-                fontSize: "28px",
-                position: 'relative'
-              }}
-            >
-              NEOTECH-
-            </div>
-            <div style={{ color: "#82d9b9", fontWeight: "bold", fontSize: "28px", position: 'relative' }}>
-              E
+          <div className="col-lg-3 col-sm-6 col-xs-12 d-flex flex-column align-items-center">
+            <div className="d-flex align-items-center">
+              <img
+                src="https://static.igem.wiki/teams/5439/logo.png"
+                alt="Neotech-e"
+                style={{ width: 120, height: 'auto', marginRight: 1, position: 'relative' }}
+              />
             </div>
           </div>
-        </div>
-          <div className="col-lg-2 col-6" >
-            <h4 className="mt-lg-0 mt-3" style={{color: 'black', fontWeight:'bold' }}>MENU</h4>
-            <ul className="list-unstyled m-2 p-2" style={{color:'black'}}>
-              <li>
-                <a href="https://2024.igem.wiki/tecmonterreygdl/" style={{color: 'black', fontWeight:'normal', marginLeft: -16}}>HOME</a>
-              </li>
-              <li>
-                <a href="https://2024.igem.wiki/tecmonterreygdl/description" style={{color: 'black', fontWeight:'normal', marginLeft: -16}}>PROJECT</a>
-              </li>
-              <li>
-                <a href="https://2024.igem.wiki/tecmonterreygdl/human-practices" style={{color: 'black', fontWeight:'normal', marginLeft: -16}}>HUMAN PRACTICES</a>
-              </li>
-              <li>
-                <a href="https://2024.igem.wiki/tecmonterreygdl/team" style={{color: 'black', fontWeight:'normal', marginLeft: -16}}>TEAM</a>
-              </li>
-              <li>
-                <a href="https://2024.igem.wiki/tecmonterreygdl/safety" style={{color: 'black', fontWeight:'normal', marginLeft: -16}}>SAFETY</a>
-              </li>
-            </ul>
-          </div>
-          <div className="col-lg-2 col-11">
+          <div className="col-lg-3 col-sm-6 col-xs-12">
             <h4 className="mt-lg-0 mt-4 mb-3" style={{color: 'black', fontWeight:'bold'}}>LOCATION</h4>
             <p style={{color: 'black'}}> Jalisco, Mexico</p>
           </div>
-          <div className="col-lg-2 col-12">
+          <div className="col-lg-3 col-sm-6 col-xs-12">
             <h4 className="mt-lg-0 mt-4 mb-3" style={{ color: 'black', fontWeight: 'bold', marginLeft: '0px' }}>FOLLOW US!</h4>
             <div className="row">
               <div className="col-2 col-sm-2">
@@ -74,12 +40,12 @@ export function Footer() {
               </div>
             </div>
           </div>
-          <div className="col-lg-2 col-12 d-flex align-items-center">
+          <div className="col-lg-3 col-sm-6 col-xs-12 d-flex align-items-center">
               <a href="https://tec.mx">
                 <img
                   src="https://static.igem.wiki/teams/5439/logos/tec-monterrey-logo.png"
                   alt="Tecnológico de Monterrey"
-                  style={{ width: '300px', height: 'auto'}}
+                  style={{ width: '180px', height: 'auto'}}
                 />
             </a>
           </div>

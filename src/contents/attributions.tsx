@@ -23,11 +23,15 @@ export function Attributions() {
 
   return (
     <>
-      <iframe
-        style={{ width: "100%" }}
-        id="igem-attribution-form"
-        src={`https://teams.igem.org/wiki/${teamID}/attributions`}
-      />
+      <div className="container-fluid p-3" id="comming-soon">
+        
+        <iframe
+          style={{ width: "100%" }}
+          id="igem-attribution-form"
+          src={`https://teams.igem.org/wiki/${teamID}/attributions`}
+        />
+
+      </div>
     </>
   );
 }
