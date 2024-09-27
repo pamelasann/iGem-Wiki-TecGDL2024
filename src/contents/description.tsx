@@ -1,5 +1,3 @@
-
-
 export function Description() {
   
   return (
@@ -11,8 +9,8 @@ export function Description() {
               <ul className="list-unstyled">
 
                 {/* <li className="ps-4">
-                    <a href="#">Title</a>
-                    <ul className="list-unstyled">
+                    <a href="#" id="title-menu">Title</a>
+                    <ul className="list-unstyled" id="subtitle-menu">
                       <li className="ps-4">
                         <a href="#">Subtitle</a>
                       </li>
@@ -20,8 +18,8 @@ export function Description() {
                   </li> */}
 
                 <li className="ps-4">
-                  <a href="#part1">Water Pollution in Mexico</a>
-                  <ul className="list-unstyled">
+                  <a href="#part1" id="title-menu">Water Pollution in Mexico</a>
+                  <ul className="list-unstyled" id="subtitle-menu">
                     <li className="ps-4">
                       <a href="#part1.1">Current Situation</a>
                     </li>
@@ -30,9 +28,9 @@ export function Description() {
                     </li>
                   </ul>
                 </li>
-                <li className="ps-4">
-                  <a href="#">Our Approach: The EC-FRET Biosensor</a>
-                  <ul className="list-unstyled">
+                <li className="ps-4 title-menu">
+                  <a href="#" id="title-menu">Our Approach: The EC-FRET Biosensor</a>
+                  <ul className="list-unstyled" id="subtitle-menu">
                     <li className="ps-4">
                       <a href="#">What is our Biosensor?</a>
                     </li>
@@ -48,11 +46,11 @@ export function Description() {
                   </ul>
                 </li>
                 <li className="ps-4">
-                  <a href="#">Conclusion and Future Plans</a>
+                  <a href="#" id="title-menu">Conclusion and Future Plans</a>
                   <ul className="list-unstyled"> </ul>
                 </li>
                 <li className="ps-4">
-                  <a href="#">FRET-eryK & AtPCS</a>
+                  <a href="#" id="title-menu">FRET-eryK & AtPCS</a>
                   <ul className="list-unstyled"> </ul>
                 </li>
               </ul>

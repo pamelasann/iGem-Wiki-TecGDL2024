@@ -11,6 +11,7 @@
 #header-title {
     font-family: Verdana, Arial, sans-serif;
     font-size: 6.5em;
+    font-weight: bold;
 }
 
 #menu-container {
@@ -22,20 +23,28 @@
 
 #menu-container a {
     text-decoration: none;
-    color: rgb(20, 20, 20);
+    color: rgb(121, 121, 121);
 }
 
 #menu-container a:hover {
     text-decoration: none;
-    color: #7975d0;
+    color: #7975d0 !important;
 }
 
 #titles-container {
     position: sticky;
     top: 0;
-    padding-top: 3em;
+    padding-top: 5em;
     line-height: 1.8;
 }
+
+#title-menu {
+    color: black !important;
+}
+#subtitle-menu {
+    color: red;
+}
+
 
 #text-content {
     box-shadow: 0px 0px 30px 20px rgb(189, 189, 217);
@@ -58,8 +67,23 @@
     font-size: 1.2em;
 }
 
-
 /** #logo-link handles the home/logo on navbar link tag <a>   **/
 #logo-link {
     text-decoration: none;
+}
+
+/** Footer CSS **/
+#main-container {
+    border-radius: 70px 70px 0px 0px;;
+    background-color: #e6e5e5;
+}
+
+
+/** #comming-soon handles content of future pages **/
+#comming-soon p {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 4.5em;
+    font-weight: bold;
+    color:#7975d0;
+    line-height: 0.5;
 }
