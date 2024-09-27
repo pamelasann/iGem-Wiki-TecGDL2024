@@ -1,18 +1,24 @@
-import './Team.css';
+
 
 export function Description() {
+  
   return (
     <>
-      {/* Custom Header for Description page */}
-      <header className="team-header">
-        <h1>Description of Water Pollutions</h1>
-      </header>
-
       <div className="container-fluid p-3">
         <div className="row">
           <div className="col-lg-3 col-md-12 pt-5 ps-5" id="menu-container">
             <div id="titles-container">
               <ul className="list-unstyled">
+
+                {/* <li className="ps-4">
+                    <a href="#">Title</a>
+                    <ul className="list-unstyled">
+                      <li className="ps-4">
+                        <a href="#">Subtitle</a>
+                      </li>
+                    </ul>
+                  </li> */}
+
                 <li className="ps-4">
                   <a href="#part1">Water Pollution in Mexico</a>
                   <ul className="list-unstyled">
@@ -43,35 +49,39 @@ export function Description() {
                 </li>
                 <li className="ps-4">
                   <a href="#">Conclusion and Future Plans</a>
-                  <ul className="list-unstyled"></ul>
+                  <ul className="list-unstyled"> </ul>
                 </li>
                 <li className="ps-4">
                   <a href="#">FRET-eryK & AtPCS</a>
-                  <ul className="list-unstyled"></ul>
+                  <ul className="list-unstyled"> </ul>
                 </li>
               </ul>
             </div>
+            
           </div>
           <div className="col-lg-9 col-md-12 p-5">
             <div className="container-fluid p-5 bg-white" id="text-content">
               <div className="container-fluid p-3 mt-5" id="part1">
                 <h1 className="mb-3">Water Pollution in Mexico</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit...</p>
-                <br />
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit...</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint architecto ipsam id dicta placeat porro eveniet iste earum, possimus quisquam dignissimos unde pariatur quam voluptatibus fugit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ea, maiores aliquam consectetur rerum fugiat repellendus! Animi, nostrum at modi et unde nobis? Impedit, vitae voluptates. Ipsum perspiciatis natus quasi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia debitis ipsam natus quibusdam soluta, sunt quis, corporis, vel minima itaque praesentium nesciunt! Blanditiis repellendus quibusdam error inventore cumque ipsum quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aliquid magni omnis asperiores nihil esse maiores veniam ut saepe, inventore et deleniti libero quam cum sequi repellendus dolor voluptates. Est. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore quaerat nulla numquam deleniti cupiditate animi? Aspernatur magnam asperiores assumenda error dolorum cumque libero inventore ipsum temporibus odio, sunt fuga aliquid?</p>
+                <br></br>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci rem voluptatem ipsum dicta fugiat nostrum doloremque repudiandae aperiam, maiores cum voluptatum ullam pariatur excepturi, ducimus eveniet? Id suscipit deserunt ex. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime eum illo earum enim repellendus quia ad adipisci quas, quasi sit ea modi facilis in, accusantium eos alias culpa quam consequatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit excepturi modi tempora esse assumenda sit quia. Libero quisquam maxime natus in voluptate cupiditate ex laboriosam, laudantium ullam asperiores totam ut? Tenetur labore ratione amet nulla quo sit, delectus tempore dolor earum ipsum, voluptatibus autem illo consequuntur consequatur possimus vel obcaecati minima. Repudiandae.</p>
               </div>
               <div className="container-fluid p-3" id="part1.1">
                 <h2>Current Situation</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit...</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint architecto ipsam id dicta placeat porro eveniet iste earum, possimus quisquam dignissimos unde pariatur quam voluptatibus fugit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ea, maiores aliquam consectetur rerum fugiat repellendus! Animi, nostrum at modi et unde nobis? Impedit, vitae voluptates. Ipsum perspiciatis natus quasi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia debitis ipsam natus quibusdam soluta, sunt quis, corporis, vel minima itaque praesentium nesciunt! Blanditiis repellendus quibusdam error inventore cumque ipsum quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aliquid magni omnis asperiores nihil esse maiores veniam ut saepe, inventore et deleniti libero quam cum sequi repellendus dolor voluptates. Est. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore quaerat nulla numquam deleniti cupiditate animi? Aspernatur magnam asperiores assumenda error dolorum cumque libero inventore ipsum temporibus odio, sunt fuga aliquid?</p>
+                <br></br>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci rem voluptatem ipsum dicta fugiat nostrum doloremque repudiandae aperiam, maiores cum voluptatum ullam pariatur excepturi, ducimus eveniet? Id suscipit deserunt ex. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime eum illo earum enim repellendus quia ad adipisci quas, quasi sit ea modi facilis in, accusantium eos alias culpa quam consequatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit excepturi modi tempora esse assumenda sit quia. Libero quisquam maxime natus in voluptate cupiditate ex laboriosam, laudantium ullam asperiores totam ut? Tenetur labore ratione amet nulla quo sit, delectus tempore dolor earum ipsum, voluptatibus autem illo consequuntur consequatur possimus vel obcaecati minima. Repudiandae.</p>
               </div>
               <div className="container-fluid p-3" id="part1.2">
                 <h2>Contaminants of Interest</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit...</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint architecto ipsam id dicta placeat porro eveniet iste earum, possimus quisquam dignissimos unde pariatur quam voluptatibus fugit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ea, maiores aliquam consectetur rerum fugiat repellendus! Animi, nostrum at modi et unde nobis? Impedit, vitae voluptates. Ipsum perspiciatis natus quasi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia debitis ipsam natus quibusdam soluta, sunt quis, corporis, vel minima itaque praesentium nesciunt! Blanditiis repellendus quibusdam error inventore cumque ipsum quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aliquid magni omnis asperiores nihil esse maiores veniam ut saepe, inventore et deleniti libero quam cum sequi repellendus dolor voluptates. Est. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore quaerat nulla numquam deleniti cupiditate animi? Aspernatur magnam asperiores assumenda error dolorum cumque libero inventore ipsum temporibus odio, sunt fuga aliquid?</p>
               </div>
             </div>
           </div>
         </div>
       </div>
+
     </>
   );
 }

@@ -1,11 +1,10 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, Routes } from "react-router-dom";
-import { Footer, Navbar, NotFound } from "../../components";
+import { Footer, Header, Navbar, NotFound } from "../../components";
 import { getPathMapping, stringToSlug } from "../../utils";
 import { useEffect } from "react";
-import Layout from "../../components/Layout";
-//import { Team } from "./Team"; // Import the Team page
+import Layout from '../../components/Layout';
 
 const App = () => {
   const pathMapping = getPathMapping();
@@ -27,7 +26,7 @@ const App = () => {
       {/* Navigation */}
       <Navbar />
 
-      {/* Layout for PageContent (no automatic Header) */}
+      {/* Header and PageContent */}
       <Layout>
         <Routes>
           {Object.entries(pathMapping).map(
@@ -36,20 +35,24 @@ const App = () => {
                 key={path}
                 path={path}
                 element={
-                  <div className="container main-container">
-                    <Component />
-                  </div>
+                  <>
+                    <Header title={title || ""} lead={lead || ""} />
+                    <div className="container main-container">
+                      <Component />
+                    </div>
+                  </>
                 }
               />
-            )
+            ),
           )}
-          {/* Special route for Team */}
-          
-          {/* Fallback route for Not Found */}
           <Route
             path="*"
             element={
               <>
+                <Header
+                  title="Not Found"
+                  lead="The requested URL was not found on this server."
+                />
                 <NotFound />
               </>
             }
@@ -58,6 +61,7 @@ const App = () => {
       </Layout>
 
       {/* Footer */}
+      {/* MUST mention license AND have a link to team wiki's repository on gitlab.igem.org */}
       <Footer />
     </>
   );
