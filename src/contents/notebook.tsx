@@ -1,8 +1,9 @@
 import { Inspirations, InspirationLink } from "../components";
-
+import './Team.css';
 export function Notebook() {
   return (
-    <>
-    </>
+    <header className="team-header">
+    <h1>Notebook</h1>
+  </header>
   );
 }
