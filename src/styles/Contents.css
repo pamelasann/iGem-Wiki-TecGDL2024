@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Nunito';
+    src:url(https://static.igem.wiki/teams/5439/fonts/nunito-variablefont-wght.ttf);
+  }
+
 .main-container {
     width: 100%;
     max-width: none;
@@ -53,6 +58,6 @@
 }
 
 #text-content p {
-    font-family: Verdana, Helvetica, Arial, sans-serif;
+    font-family: 'Nunito', Verdana, Helvetica, Arial, sans-serif;
     font-size: 1.2em;
 }

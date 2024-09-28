@@ -59,7 +59,26 @@ footer a {
   text-decoration: none;
 }
 
+
+@font-face {
+  font-family: 'Anton';
+  src:url(https://static.igem.wiki/teams/5439/fonts/titanone-regular.ttf);
+}
+
+#title-font {
+  font-family: 'Anton', Helvetica, sans-serif;
+  letter-spacing: 1px;
+  
+}
+
 footer a:hover {
   color: white;
   text-decoration: underline;
 }
+
+@media screen and (max-width:992px) {
+  #attribution-text {
+    text-align: center !important;
+  }
+}
+
