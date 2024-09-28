@@ -121,28 +121,31 @@ export function Navbar({ itemSpacing = "10px" }: { itemSpacing?: string }) {
       style={{ backgroundColor: "#e6e5e5", padding: "20px", height: "80px" }}
       fixed="top"
     >
-      <Container fluid>
-        <a href="https://2024.igem.wiki/tecmonterreygdl/">
-            <Image
-              src="https://static.igem.wiki/teams/5439/logo.png"
-              alt="Neotech-e"
-              style={{ width: 70, height: 70, marginRight: -5 }}
-            />
-        </a>
+      <div className="container-fluid">
+        <div className="align-items-center pe-2">
+          <a href="https://2024.igem.wiki/tecmonterreygdl/">
+              <Image
+                src="https://static.igem.wiki/teams/5439/logo.png"
+                alt="Neotech-e"
+                style={{ width: 'auto', height: '3.3em' }}
+              />
+          </a>
+        </div>
+        
         <a href="https://2024.igem.wiki/tecmonterreygdl/" id="logo-link">
-            <div
+            <div id="title-font"
               style={{
                 color: "#7975d5",
                 fontWeight: "bold",
                 marginRight: 0,
-                fontSize: "24px",
+                fontSize: "1.8em",
                 display: "inline-block",
               }}
             >
-              NEOTECH-
+              Neotech
             </div>
-            <div style={{ color: "#82d9b9", fontWeight: "bold", fontSize: "24px", display: "inline-block"}}>
-              E
+            <div style={{ color: "#82d9b9", fontWeight: "bold", fontSize: "1.8em", display: "inline-block"}} id="title-font">
+              -e
             </div>
         </a>
             <BootstrapNavbar.Brand>
@@ -152,7 +155,7 @@ export function Navbar({ itemSpacing = "10px" }: { itemSpacing?: string }) {
             <BootstrapNavbar.Collapse id="basic-navbar-nav">
               <Nav className="left-aligned">{pages}</Nav>
             </BootstrapNavbar.Collapse>
-      </Container>
+      </div>
     </BootstrapNavbar>
   );
 }
