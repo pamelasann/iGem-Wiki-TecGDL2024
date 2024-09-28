@@ -1,19 +1,32 @@
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+
 interface HeaderProps {
   title: string;
-  lead: string;
+  lead?: string; // make this optional if not used
 }
 
 export function Header({ title, lead }: HeaderProps) {
   return (
-    <header id="header-container">
-      <div className="container-fluid h-100">
-        <div className="row h-100 align-items-center">
-          <div className="col-lg-12">
-            <h1 className="text-white ps-5 ms-3" id="header-title">{title}</h1>
-            {/* <p className="lead mb-5 text-white-50">{lead}</p> */}
-          </div>
-        </div>
-      </div>
-    </header>
+    <View style={styles.headerContainer}>
+      <Text style={styles.headerTitle}>{title}</Text>
+      {lead && <Text style={styles.leadText}>{lead}</Text>}
+    </View>
   );
 }
+
+const styles = StyleSheet.create({
+  headerContainer: {
+    backgroundColor: '#007bff', // You can customize this color
+    padding: 20,
+  },
+  headerTitle: {
+    color: '#ffffff',
+    fontSize: 24,
+    fontWeight: 'bold',
+  },
+  leadText: {
+    color: '#ffffff',
+    fontSize: 16,
+  },
+});

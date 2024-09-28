@@ -74,7 +74,7 @@ const Pages: (Page | Folder)[] = [
         name: "Experiments",
         title: "Experiments",
         path: "/experiments",
-        component: Experiments,
+        component: experiments,
         lead: "Describe the research, experiments, and protocols you used in your iGEM project.",
       },
       {
