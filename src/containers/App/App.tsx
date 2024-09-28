@@ -20,6 +20,7 @@ const App = () => {
     currentPath in pathMapping ? pathMapping[currentPath].title : "Not Found";
 
   const [loading, setLoading] = useState(false); // Loading state
+  const [fadeOut, setFadeOut] = useState(false); // Fade out state
 
   // Update the title and loading state on route change
   useEffect(() => {
@@ -27,7 +28,13 @@ const App = () => {
     setLoading(true); // Set loading to true when the route changes
 
     const handleRouteChange = () => {
-      setLoading(false); // Set loading to false after a short delay
+      setFadeOut(true); // Start fade out
+      const timeoutId = setTimeout(() => {
+        setLoading(false); // Set loading to false after a short delay
+        setFadeOut(false); // Reset fade out state
+      }, 500); // Match this duration with the CSS transition duration
+
+      return () => clearTimeout(timeoutId); // Clear timeout on unmount
     };
 
     // Simulate loading time (you can adjust the timeout)
@@ -43,8 +50,8 @@ const App = () => {
 
       {/* Layout for PageContent (no automatic Header) */}
       <Layout>
-        {loading ? (
-          <Loading className={loading ? "show" : ""} /> // Show loading screen while loading
+        {loading || fadeOut ? (
+          <Loading className={fadeOut ? "fade-out" : "show"} /> // Show loading screen while loading
         ) : (
           <Routes>
             {Object.entries(pathMapping).map(

@@ -81,3 +81,8 @@ footer a:hover {
   opacity: 1; /* Make it fully visible */
 }
 
+/* Fade out effect */
+.loading-screen.fade-out {
+  opacity: 0; /* Fade out */
+}
+
