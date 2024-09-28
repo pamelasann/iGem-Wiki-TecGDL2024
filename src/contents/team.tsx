@@ -100,7 +100,7 @@ export function Team() {
                       <div style={{ fontStyle: 'italic', color: '#555' }}>{member.role}</div>
                       <div style={{ marginTop: '0.5em', color: '#777' }}>{member.quote}</div>
                     </div>
-                    <hr style={{ margin: '0.5em 0', borderColor: '#ccc' }} />
+                    <hr style={{ margin: '0', borderColor: '#ccc' }} />
                     <div style={{
                       backgroundColor: '#f8f8f8', // LinkedIn Blue#0077b5
                       textAlign: 'center',
