@@ -63,3 +63,21 @@ footer a:hover {
   color: white;
   text-decoration: underline;
 }
+
+.loading-screen {
+  background-color: #e6e5e5; /* Set your preferred background color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of the viewport */
+  font-size: 24px;
+  z-index: 9999; /* Ensures the loading screen is on top */
+  opacity: 0; /* Start invisible */
+  transition: opacity 0.5s ease-in-out; /* Transition for fade effect */
+}
+
+/* When the loading screen is visible */
+.loading-screen.show {
+  opacity: 1; /* Make it fully visible */
+}
+
