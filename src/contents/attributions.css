@@ -1,0 +1,13 @@
+.attributions-header {
+    background-image: url('https://nsf-gov-resources.nsf.gov/styles/hero_small/s3/2023-04/Andromeda_galaxy_h.jpg.webp?VersionId=ax62fO1jAP93s16R6H_jPKVhTfvwH9X4&itok=WSHuusB5'); /* Add your background image URL */
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .justify-text {
+    text-align: justify;
+  }
+  

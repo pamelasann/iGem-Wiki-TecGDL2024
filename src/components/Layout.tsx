@@ -38,12 +38,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <canvas id="gradient-canvas" data-transition-in></canvas>
         <div className="bg-img"></div>
       </div>
-      <div className="pt-4">
-        <div className="content white-blur-overlay">
-          {children}
-        </div>
+      <div className="content white-blur-overlay">
+        {children}
       </div>
-      
     </>
   );
 };

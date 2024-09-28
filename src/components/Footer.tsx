@@ -1,3 +1,4 @@
+import React from "react";
 import { stringToSlug } from "../utils";
 //import "./footer.css"; //fk this erros
 

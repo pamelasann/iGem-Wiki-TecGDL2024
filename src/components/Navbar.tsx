@@ -59,43 +59,44 @@ export function Navbar({ itemSpacing = "10px" }: { itemSpacing?: string }) {
             </NavDropdown.Item>
           );
         }
-      return null;
-    });
+        return null;
+      });
 
-  return (
-    <NavDropdown
-        key={`page-${pageIndex}`}
-        title={item.name}
-        id={`basic-nav-dropdown-${pageIndex}`}
-        show={showDropdown && hoverIndex === pageIndex} // Show dropdown when showDropdown and hoverIndex match
-        onMouseEnter={() => handleMouseEnter(pageIndex)}
-        onMouseLeave={handleMouseLeave}
-        style={{
-          margin: "5px 0",
-          fontWeight: "bold",
-          position: "relative",
-          transition: "opacity 0.3s ease-in-out", // Correct the transition duration
-        }}
-      >
-      <div
-        style={{
-          display: showDropdown && hoverIndex === pageIndex ? "flex" : "none", // Toggle display property
-          borderRadius: "100px",
-          background: "#8976ec",
-          fontSize : "12px",
-          padding: "0px 0",
-          position: "absolute",
-          left: "50%",
-          transform: "translateX(-50%)",
-          margin: "-15px 0",
-          opacity: showDropdown && hoverIndex === pageIndex ? 1 : 0,
-          transition: "opacity 0.3s ease-in-out", // Correct the transition duration
-        }}
-        >
-      {folderItems}
-      </div>
-    </NavDropdown>
-  );
+      return (
+<NavDropdown
+  key={`page-${pageIndex}`}
+  title={item.name}
+  id={`basic-nav-dropdown-${pageIndex}`}
+  show={showDropdown && hoverIndex === pageIndex} // Show dropdown when showDropdown and hoverIndex match
+  onMouseEnter={() => handleMouseEnter(pageIndex)}
+  onMouseLeave={handleMouseLeave}
+  style={{
+    margin: "5px 0",
+    fontWeight: "bold",
+    position: "relative",
+    transition: "opacity 0.3s ease-in-out", // Correct the transition duration
+  }}
+>
+  <div
+    style={{
+      display: showDropdown && hoverIndex === pageIndex ? "flex" : "none", // Toggle display property
+      borderRadius: "100px",
+      background: "#8976ec",
+      fontSize : "12px",
+      padding: "0px 0",
+      position: "absolute",
+      left: "50%",
+      transform: "translateX(-50%)",
+      margin: "-15px 0",
+      opacity: showDropdown && hoverIndex === pageIndex ? 1 : 0,
+      transition: "opacity 0.3s ease-in-out", // Correct the transition duration
+    }}
+  >
+    {folderItems}
+  </div>
+</NavDropdown>
+
+      );
     } else if ("path" in item && item.path) {
       return (
         <Nav.Link
@@ -113,7 +114,6 @@ export function Navbar({ itemSpacing = "10px" }: { itemSpacing?: string }) {
     }
     return null;
   });
-
 
   return (
     <BootstrapNavbar
