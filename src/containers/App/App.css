@@ -75,3 +75,10 @@ footer a:hover {
   color: white;
   text-decoration: underline;
 }
+
+@media screen and (max-width:992px) {
+  #attribution-text {
+    text-align: center !important;
+  }
+}
+
