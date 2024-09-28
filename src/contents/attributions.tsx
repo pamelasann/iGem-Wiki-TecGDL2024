@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import './attributions.css';
 
 export function Attributions() {
   const teamID = import.meta.env.VITE_TEAM_ID;
@@ -24,7 +23,17 @@ export function Attributions() {
 
   return (
     <>
-      <header className="attributions-header">
+      <header
+        style={{
+          backgroundImage: "url('https://nsf-gov-resources.nsf.gov/styles/hero_small/s3/2023-04/Andromeda_galaxy_h.jpg.webp?VersionId=ax62fO1jAP93s16R6H_jPKVhTfvwH9X4&itok=WSHuusB5')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          height: "300px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
         <h1>Attributions</h1>
       </header>
 
@@ -34,7 +43,7 @@ export function Attributions() {
             <div className="col">
               <h2>The particularity of our team and the story behind its creation</h2>
               <hr />
-              <p className="justify-text">
+              <p style={{ textAlign: "justify" }}>
                 &emsp;&emsp;Unity is s. <br /><br />
                 &emsp;&emsp;A few INSA Lyon t <br /><br />
                 &emsp;&emsp;When talking about iGEM with the Lyon I university on our campus, Agnès Rodrigue (our PI from INSA Lyon) was able to recruit Erwan Gueguen (our PI from the university), along with a few students! Our team is therefore made up of students from the Lyon 1 university and the engineering school INSA Lyon! We are so happy to be working together, as we were able to meet people from the campus that we wouldn’t have met otherwise. Although the team was created in May 2021, we only started brainstorming on this project in October 2021, and the whole team contributed to the conceptualization of the project, inspired from the work performed by the MAP laboratories and previous iGEM teams such as Cambridge 2010, China SHSID 2018, Singapore NUS and Bonn 2019. Lab work started in January 2022 and every member working on the wet lab was responsible for lab maintenance. The work we provided for iGEM was done entirely in our free time!<br />
@@ -48,7 +57,7 @@ export function Attributions() {
             <h2>Logistics Team</h2>
             <hr />
             <div className="col">
-              <p className="justify-text">
+              <p style={{ textAlign: "justify" }}>
                 <b>Team Member 1</b><br />
                 Responsible for coordinating transportation and event logistics.<br /><br />
                 <b>Team Member 2</b><br />
@@ -61,7 +70,7 @@ export function Attributions() {
             <h2>Finances and Sponsoring</h2>
             <hr />
             <div className="col">
-              <p className="justify-text">
+              <p style={{ textAlign: "justify" }}>
                 <b>Team Member 1</b><br />
                 Manages budget and financial planning.<br /><br />
                 <b>Team Member 2</b><br />
@@ -74,7 +83,7 @@ export function Attributions() {
             <h2>Communication Team</h2>
             <hr />
             <div className="col">
-              <p className="justify-text">
+              <p style={{ textAlign: "justify" }}>
                 <b>Team Member 1</b><br />
                 Handles social media and public relations.<br /><br />
                 <b>Team Member 2</b><br />
@@ -87,7 +96,7 @@ export function Attributions() {
             <h2>Human Practices Team</h2>
             <hr />
             <div className="col">
-              <p className="justify-text">
+              <p style={{ textAlign: "justify" }}>
                 <b>Team Member 1</b><br />
                 Engages with community and stakeholders for feedback.<br /><br />
                 <b>Team Member 2</b><br />
@@ -100,7 +109,7 @@ export function Attributions() {
             <h2>Dry Lab Team</h2>
             <hr />
             <div className="col">
-              <p className="justify-text">
+              <p style={{ textAlign: "justify" }}>
                 <b>Team Member 1</b><br />
                 Responsible for computational modeling and data analysis.<br /><br />
                 <b>Team Member 2</b><br />
@@ -113,7 +122,7 @@ export function Attributions() {
             <h2>Wet Lab and Research Team</h2>
             <hr />
             <div className="col">
-              <p className="justify-text">
+              <p style={{ textAlign: "justify" }}>
                 <b>Team Member 1</b><br />
                 Oversees experiments and laboratory procedures.<br /><br />
                 <b>Team Member 2</b><br />
@@ -126,7 +135,7 @@ export function Attributions() {
             <h2>Instructors and Advisors</h2>
             <hr />
             <div className="col">
-              <p className="justify-text">
+              <p style={{ textAlign: "justify" }}>
                 <b>Instructor 1</b><br />
                 Provides guidance and mentorship throughout the project.<br /><br />
                 <b>Instructor 2</b><br />

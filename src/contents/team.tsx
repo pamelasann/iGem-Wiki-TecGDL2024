@@ -1,27 +1,29 @@
-import './Team.css';
-
 export function Team() {
   return (
     <>
-      <header className="team-header">
-        <h1 style={{ color: 'white', textShadow: '2px 2px 4px  rgba(0, 0, 0, 0.7)' }}>Our Team</h1>
+      <header className="team-header" style={{
+        backgroundImage: `url('https://nsf-gov-resources.nsf.gov/styles/hero_small/s3/2023-04/Andromeda_galaxy_h.jpg.webp?VersionId=ax62fO1jAP93s16R6H_jPKVhTfvwH9X4&itok=WSHuusB5')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        height: '300px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+      }}>
+        <h1 style={{ color: 'white', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.7)' }}>Our Team</h1>
       </header>
 
-      <div className="lead_div">
-
-
-        {/* Team Header Image */}
-
-
-        <div className="blueblock quote">
+      <div style={{ textAlign: 'center' }}>
+        {/* Team Header Quote */}
+        <div style={{ padding: '2em 0', fontStyle: 'italic', marginTop: '1em' }}>
           <p>
-            <i>"Sometimes in the life i think im too competitive"</i> - LeBron James
+            <i>"Sometimes in life I think I'm too competitive"</i> - LeBron James
           </p>
         </div>
       </div>
 
       {/* Team Members */}
-      <div className="blueblock">
+      <div style={{ padding: '2em 0' }}>
         <div className="container">
           <div className="layout">
             <div className="row d-flex justify-content-center">
@@ -32,52 +34,69 @@ export function Team() {
                   quote: 'I like jazz',
                   imgSrc: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84c855027c41fd27ae641a9bac',
                   linkedIn: 'https://www.linkedin.com/in/antelis/',
-                },                {
-                  name: 'Juan Carlos Bodoque',
-                  role: 'Team manager',
-                  quote: 'I like jazz',
-                  imgSrc: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84c855027c41fd27ae641a9bac',
-                  linkedIn: 'https://www.linkedin.com/in/antelis/',
-                },                {
-                  name: 'Juan Carlos Bodoque',
-                  role: 'Team manager',
-                  quote: 'I like jazz',
-                  imgSrc: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84c855027c41fd27ae641a9bac',
-                  linkedIn: 'https://www.linkedin.com/in/antelis/',
-                },                {
-                  name: 'Juan Carlos Bodoque',
-                  role: 'Team manager',
-                  quote: 'I like jazz',
-                  imgSrc: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84c855027c41fd27ae641a9bac',
-                  linkedIn: 'https://www.linkedin.com/in/antelis/',
                 },
-                // Add other members here...
+                {
+                  name: 'Juan Carlos Bodoque',
+                  role: 'Team manager',
+                  quote: 'I like jazz',
+                  imgSrc: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84c855027c41fd27ae641a9bac',
+                  linkedIn: 'https://www.linkedin.com/in/antelis/',
+                },                    {
+                  name: 'Juan Carlos Bodoque',
+                  role: 'Team manager',
+                  quote: 'I like jazz',
+                  imgSrc: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84c855027c41fd27ae641a9bac',
+                  linkedIn: 'https://www.linkedin.com/in/antelis/',
+                },                    {
+                  name: 'Juan Carlos Bodoque',
+                  role: 'Team manager',
+                  quote: 'I like jazz',
+                  imgSrc: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84c855027c41fd27ae641a9bac',
+                  linkedIn: 'https://www.linkedin.com/in/antelis/',
+                },                    
+                // Repeat member objects as needed...
               ].map((member, index) => (
                 <div className="col-lg-4 col-md-6 col-8" key={index}>
-                  <div className="card border-0 shadow-lg my-5">
-                    <div className="card-body d-flex flex-column align-items-center">
+                  <div style={{
+                    backgroundColor: 'white',
+                    borderRadius: '1em',
+                    overflow: 'hidden',
+                    boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)', // Enhanced shadow
+                    margin: '1.5em',
+                    transition: 'transform 0.3s', // Smooth transition for hover effect
+                  }}
+                  onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.05)')}
+                  onMouseLeave={e => (e.currentTarget.style.transform = 'scale(1)')}
+                  >
+                    <div style={{ textAlign: 'center', padding: '2em' }}>
                       <img
-                        className="rounded-circle mx-auto shadow-sm member-profile"
+                        style={{
+                          borderRadius: '50%',
+                          width: '120px', // Adjusted size
+                          height: '120px',
+                          objectFit: 'cover',
+                          boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)'
+                        }}
                         src={member.imgSrc}
                         alt={member.name}
                       />
-                      <h5 className="member-name mt-3 text-center font-weight-bold">{member.name}</h5>
-                      <div className="mb-2 text-center">{member.role}</div>
-                      <div className="text-center">{member.quote}</div>
+                      <h5 style={{ marginTop: '1em', fontWeight: 'bold', fontSize: '1.2em' }}>{member.name}</h5>
+                      <div style={{ fontStyle: 'italic', color: '#555' }}>{member.role}</div>
+                      <div style={{ marginTop: '0.5em', color: '#777' }}>{member.quote}</div>
                     </div>
-                    <div className="card-footer theme-bg-primary text-center">
-                      <ul className="social-list list-inline mb-0 mx-auto">
-                        <li>
-                          <a href={member.linkedIn} target="_blank" rel="noopener noreferrer">
-                            <img
-                              className="linkedIn-image"
-                              src="https://www.shareicon.net/data/2015/09/28/108616_media_512x512.png"
-                              alt="LinkedIn"
-                              style={{ width: '50px', height: '50px' }}
-                            />
-                          </a>
-                        </li>
-                      </ul>
+                    <hr style={{ margin: '0', borderColor: '#ccc' }} /> {/* Add this line */}
+                    <div style={{
+                      backgroundColor: '#f8f8f8', // LinkedIn Blue#0077b5
+                      textAlign: 'center',
+                      padding: '1em'
+                    }}>
+                      <a href={member.linkedIn} target="_blank" rel="noopener noreferrer">
+                        <img
+                          src="https://www.shareicon.net/data/2015/09/28/108616_media_512x512.png"
+                          alt="LinkedIn"
+                          style={{ width: '50px', height: '50px' }}
+                        />
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -87,7 +106,7 @@ export function Team() {
         </div>
       </div>
 
-      <div className="blueblock" style={{ paddingTop: '3em' }}></div>
+      <div style={{ paddingTop: '3em' }}></div>
     </>
   );
 }
