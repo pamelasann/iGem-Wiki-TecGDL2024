@@ -17,9 +17,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             navigator.userAgent
           )
         ) {
-          console.log('mobile');
+          //console.log('mobile');
         } else {
-          console.log('desktop');
+          //console.log('desktop');
           initCanvas('#gradient-canvas');
         }
       }, 500);
@@ -34,7 +34,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <>
       <div id="loader-wrapper"></div>
-      <div className="background">
+      <div className="background ">
         <canvas id="gradient-canvas" data-transition-in></canvas>
         <div className="bg-img"></div>
       </div>

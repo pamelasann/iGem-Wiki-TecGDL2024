@@ -1,21 +1,6 @@
 export function Description() {
   return (
     <>
-      {/* Custom Header for Description page */}
-      <header
-        style={{
-          backgroundImage: "url('https://nsf-gov-resources.nsf.gov/styles/hero_small/s3/2023-04/Andromeda_galaxy_h.jpg.webp?VersionId=ax62fO1jAP93s16R6H_jPKVhTfvwH9X4&itok=WSHuusB5')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          height: "300px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <h1>Description of Water Pollution</h1>
-      </header>
-
       <div className="container-fluid p-3">
         <div className="row">
           <div className="col-lg-3 col-md-12 pt-5 ps-5" id="menu-container">

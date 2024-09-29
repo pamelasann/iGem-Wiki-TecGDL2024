@@ -6,7 +6,7 @@ export const getPathMapping = () => {
       name: string | undefined;
       title: string | undefined;
       component: React.FC;
-      lead: string | undefined;
+      backgroundImage?: string;  
     };
   }>((map, item) => {
     if ("path" in item && item.path && item.component) {
@@ -14,7 +14,7 @@ export const getPathMapping = () => {
         name: item.name,
         title: item.title,
         component: item.component,
-        lead: item.lead,
+        backgroundImage: item.backgroundImage,
       };
     } else if ("folder" in item && item.folder) {
       item.folder.forEach((page) => {
@@ -23,7 +23,7 @@ export const getPathMapping = () => {
             name: page.name,
             title: page.title,
             component: page.component,
-            lead: page.lead,
+            backgroundImage: page.backgroundImage,
           };
         }
       });
