@@ -11,7 +11,7 @@ export function Footer() {
     <footer style={{ background: "#e6e5e5", borderRadius: '45px 45px 0 0', }} className="footer">
       <div className="container-fluid p-2">
         <div className="row">
-          <div className="col-xl-3 col-12 d-flex flex-column align-items-center justify-content-center" id="title-font" style={{ minHeight: '9em' }}>
+          <div className="col-xl-3 col-12 d-flex flex-column align-items-center justify-content-center" id="title-font" style={{ minHeight: '8em' }}>
             <div className="d-flex align-items-center">
               <div
                 style={{
@@ -27,7 +27,7 @@ export function Footer() {
               </div>
             </div>
           </div>
-          <div className="col-xl-3 col-12 d-flex flex-column align-items-center justify-content-center" style={{ minHeight: '7em' }}>
+          <div className="col-xl-3 col-12 d-flex flex-column align-items-center justify-content-center" style={{ minHeight: '6em' }}>
             <h4 className="" style={{color: 'black', fontWeight:'bold'}}>LOCATION</h4>
             <div className="d-flex align-items-center">
               <img
@@ -38,7 +38,7 @@ export function Footer() {
                   Guadalajara, Mexico
             </div>
           </div>
-          <div className="col-xl-3 col-12 d-flex flex-column align-items-center justify-content-center" style={{ minHeight: '7em' }}>
+          <div className="col-xl-3 col-12 d-flex flex-column align-items-center justify-content-center" style={{ minHeight: '6em' }}>
             <h4 className="" style={{ color: 'black', fontWeight: 'bold'}}>FOLLOW US!</h4>
             <div className="d-flex align-items-center">
                 <img
