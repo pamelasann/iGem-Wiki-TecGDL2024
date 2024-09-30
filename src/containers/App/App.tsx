@@ -11,7 +11,8 @@ import Loading from "../../components/Loading"; // Import the Loading component
 
 const App = () => {
   const pathMapping = getPathMapping();
-  const location = useLocation();  
+  const location = useLocation();
+
   const currentPath =
     location.pathname
       .split(`${stringToSlug(import.meta.env.VITE_TEAM_NAME)}`)
@@ -20,7 +21,6 @@ const App = () => {
   // Set Page Title
   const title =
     currentPath in pathMapping ? pathMapping[currentPath].title : "Not Found";
-
 
   const [loading, setLoading] = useState(false); // State to manage loading
   const [fadeClass, setFadeClass] = useState(""); // State for fade effect
@@ -33,14 +33,21 @@ const App = () => {
     // Start loading and fade in
     setLoading(true);
     setFadeClass("fade-in");
+    document.body.classList.add("no-scroll"); // Add class to prevent scrolling
 
     // Fade out after a brief timeout
     const timer = setTimeout(() => {
       setFadeClass("fade-out");
-      setTimeout(() => setLoading(false), 500); // Wait for fade-out to finish
+      setTimeout(() => {
+        setLoading(false);
+        document.body.classList.remove("no-scroll"); // Remove class to allow scrolling
+      }, 500); // Wait for fade-out to finish
     }, 1000); // Adjust this timeout as needed
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      document.body.classList.remove("no-scroll"); // Ensure class is removed if component unmounts
+    };
   }, [location.pathname]); // Run this effect on location changes
 
   return (
