@@ -47,7 +47,6 @@ export function Team() {
       }}>
         <h1 style={{ color: 'white', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.7)' }}>Our Team</h1>
       </header>
-
       <div style={{ textAlign: 'center' }}>
         {/* Team Header Quote */}
         <div style={{ padding: '2em 0', fontStyle: 'italic', marginTop: '1em' }}>

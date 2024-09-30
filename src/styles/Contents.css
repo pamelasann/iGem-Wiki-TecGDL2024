@@ -9,8 +9,10 @@
 }
 
 #header-container {
-    background-image: url('https://static.igem.wiki/teams/4594/wiki/imp-static/desc-image1.png');
+    background-size: contain; 
+    background-repeat: no-repeat;
     height: 600px;
+    width: 100%;   
 }
 
 #header-title {
@@ -19,26 +21,27 @@
 }
 
 #menu-container {
-    font-family: Helvetica, Verdana, Arial, sans-serif;
-    font-size: 1.5em;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    font-size: 1.2em;
     font-weight: 200;
     padding-left: 20px;
 }
 
 #menu-container a {
     text-decoration: none;
-    color: rgb(131, 131, 131);
+    color: rgb(20, 20, 20);
 }
 
 #menu-container a:hover {
     text-decoration: none;
-    color: rgb(185, 185, 185);
+    color: #7975d0;
 }
 
 #titles-container {
     position: sticky;
     top: 0;
-    padding-top: 2em;
+    padding-top: 3em;
+    line-height: 1.8;
 }
 
 #text-content {
@@ -52,7 +55,7 @@
 }
 
 #text-content h2 {
-    font-family: Verdana, Helvetica, Arial, sans-serif;
+    font-family: Helvetica, Verdana, Arial, sans-serif;
     font-size: 2em;
     padding-bottom: 0.3em;
 }
@@ -60,4 +63,9 @@
 #text-content p {
     font-family: 'Nunito', Verdana, Helvetica, Arial, sans-serif;
     font-size: 1.2em;
+}
+
+/** #logo-link handles the home/logo on navbar link tag <a>   **/
+#logo-link {
+    text-decoration: none;
 }

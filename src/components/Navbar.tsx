@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import BootstrapNavbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
@@ -7,7 +6,7 @@ import { Link } from "react-router-dom";
 import Image from "react-bootstrap/Image";
 import Pages from "../pages.ts";
 
-export function Navbar({ itemSpacing = "10px" }: { itemSpacing?: string }) {
+export function Navbar({ }: { itemSpacing?: string }) {
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
   const [hoverItem, setHoverItem] = useState<number | null>(null);
   const [showDropdown, setShowDropdown] = useState<boolean>(false);
@@ -67,19 +66,19 @@ export function Navbar({ itemSpacing = "10px" }: { itemSpacing?: string }) {
   key={`page-${pageIndex}`}
   title={item.name}
   id={`basic-nav-dropdown-${pageIndex}`}
-  show={showDropdown && hoverIndex === pageIndex} // Show dropdown when showDropdown and hoverIndex match
+  show={showDropdown && hoverIndex === pageIndex}
   onMouseEnter={() => handleMouseEnter(pageIndex)}
   onMouseLeave={handleMouseLeave}
   style={{
     margin: "5px 0",
     fontWeight: "bold",
     position: "relative",
-    transition: "opacity 0.3s ease-in-out", // Correct the transition duration
+    transition: "opacity 0.3s ease-in-out",
   }}
 >
   <div
     style={{
-      display: showDropdown && hoverIndex === pageIndex ? "flex" : "none", // Toggle display property
+      display: showDropdown && hoverIndex === pageIndex ? "flex" : "none",
       borderRadius: "100px",
       background: "#8976ec",
       fontSize : "12px",
@@ -89,7 +88,7 @@ export function Navbar({ itemSpacing = "10px" }: { itemSpacing?: string }) {
       transform: "translateX(-50%)",
       margin: "-15px 0",
       opacity: showDropdown && hoverIndex === pageIndex ? 1 : 0,
-      transition: "opacity 0.3s ease-in-out", // Correct the transition duration
+      transition: "opacity 0.3s ease-in-out",
     }}
   >
     {folderItems}
