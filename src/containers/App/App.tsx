@@ -5,6 +5,8 @@ import { Footer, Header, Navbar, NotFound } from "../../components";
 import { getPathMapping, stringToSlug } from "../../utils";
 import { useEffect } from "react";
 import Layout from "../../components/Layout";
+import ScrollProgressBar from "../../components/Scrolling";
+import BackToTop from "../../components/Top";
 //import { Team } from "./Team"; // Import the Team page
 
 const App = () => {
@@ -24,6 +26,9 @@ const App = () => {
 
   return (
     <>
+      {/* Scroll Progress Bar */}
+      <ScrollProgressBar />
+
       {/* Navigation */}
       <Navbar />
 
@@ -65,10 +70,14 @@ const App = () => {
             }
           />
         </Routes>
+        
       </Layout>
-
+      {/* Back to Top Button */}
+      <BackToTop />
       {/* Footer */}
       <Footer />
+
+
     </>
   );
 };
