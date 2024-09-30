@@ -19,9 +19,8 @@
 }
 
 #header-container {
-    background-size: contain; 
+    background-size: cover; 
     background-repeat: no-repeat;
-    width: 120%;
     display: flex;
     align-items: center;
 }
