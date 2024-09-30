@@ -8,7 +8,6 @@ const Loading = ({ className }: { className?: string }) => {
         alt="Loading..." 
         className="loading-logo" 
       />
-      <div className="loading-text">Cargando...</div> {/* Optional text */}
     </div>
   );
 };
