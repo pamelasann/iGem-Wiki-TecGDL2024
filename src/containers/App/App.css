@@ -88,27 +88,33 @@ footer a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.9);
-  z-index: 9999;
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo con algo de transparencia */
+  z-index: 9999; /* Asegúrate de que se superponga a otros elementos */
+  opacity: 0; /* Start with hidden */
+  transition: opacity 0.5s ease; /* Smooth transition for fading */
+}
+
+.loading-screen.fade-in {
+  opacity: 1; /* Fully visible */
+}
+
+.loading-screen.fade-out {
+  opacity: 0; /* Fully hidden */
 }
 
 .loading-logo {
-  width: 100px;
+  width: 100px; /* Adjust the size as necessary */
   height: auto;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  /* Removed spin animation */
 }
 
 .loading-text {
-  margin-top: 10px;
-  font-size: 20px;
-  color: #333;
-  text-align: center;
+  margin-top: 10px; /* Space between the logo and text */
+  font-size: 20px; /* Adjust text size as necessary */
+  color: #333; /* Text color */
+  text-align: center; /* Center the text */
 }
+
 
 /* Table Styles */
 .table {

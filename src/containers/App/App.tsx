@@ -23,18 +23,21 @@ const App = () => {
 
 
   const [loading, setLoading] = useState(false); // State to manage loading
+  const [fadeClass, setFadeClass] = useState(""); // State for fade effect
 
   useEffect(() => {
     document.title = `${title || ""} | ${import.meta.env.VITE_TEAM_NAME} - iGEM ${import.meta.env.VITE_TEAM_YEAR}`;
   }, [title]);
 
   useEffect(() => {
-    // Set loading to true when the component mounts
+    // Start loading and fade in
     setLoading(true);
+    setFadeClass("fade-in");
 
-    // Hide loading after a brief timeout to simulate loading time
+    // Fade out after a brief timeout
     const timer = setTimeout(() => {
-      setLoading(false);
+      setFadeClass("fade-out");
+      setTimeout(() => setLoading(false), 500); // Wait for fade-out to finish
     }, 1000); // Adjust this timeout as needed
 
     return () => clearTimeout(timer);
@@ -49,7 +52,7 @@ const App = () => {
       <Navbar />
 
       {/* Loading Screen */}
-      {loading && <Loading />}
+      {loading && <Loading className={fadeClass} />}
 
       {/* Layout for PageContent (no automatic Header) */}
       <Layout>
