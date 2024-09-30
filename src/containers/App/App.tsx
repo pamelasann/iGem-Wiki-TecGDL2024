@@ -8,6 +8,7 @@ import Layout from "../../components/Layout";
 import ScrollProgressBar from "../../components/Scrolling";
 import BackToTop from "../../components/Top";
 import Loading from "../../components/Loading"; // Import the Loading component
+import 'katex/dist/katex.min.css';
 
 const App = () => {
   const pathMapping = getPathMapping();
