@@ -11,23 +11,22 @@ export function Footer() {
     <footer style={{ background: "#e6e5e5", borderRadius: '45px 45px 0 0', }} className="footer">
       <div className="container-fluid p-2">
         <div className="row">
-          <div className="col-xl-3 col-12 d-flex flex-column align-items-center justify-content-center" id="title-font" style={{ minHeight: '8em' }}>
-            <div className="d-flex align-items-center">
+          <div className="col-xl-3 col-md-6 col-12 d-flex flex-column align-items-center justify-content-center" id="title-font" style={{ minHeight: '6em' }}>
+            <div className="d-flex align-items-center" id="footer-title">
               <div
                 style={{
                   color: "#7975d5",
                   fontWeight: "bold",
-                  fontSize: "3.2em",
                 }}
               >
                 Neotech
               </div>
-              <div style={{ color: "#82d9b9", fontWeight: "bold", fontSize: "3.2em",}}>
+              <div style={{ color: "#82d9b9", fontWeight: "bold"}}>
                 -e
               </div>
             </div>
           </div>
-          <div className="col-xl-3 col-12 d-flex flex-column align-items-center justify-content-center" style={{ minHeight: '6em' }}>
+          <div className="col-xl-3 col-md-6 col-12 d-flex flex-column align-items-center justify-content-center" id="footer-subtitle" style={{ minHeight: '6em' }}>
             <h4 className="" style={{color: 'black', fontWeight:'bold'}}>LOCATION</h4>
             <div className="d-flex align-items-center">
               <img
@@ -38,7 +37,7 @@ export function Footer() {
                   Guadalajara, Mexico
             </div>
           </div>
-          <div className="col-xl-3 col-12 d-flex flex-column align-items-center justify-content-center" style={{ minHeight: '6em' }}>
+          <div className="col-xl-3 col-md-6 col-12 d-flex flex-column align-items-center justify-content-center" id="footer-subtitle" style={{ minHeight: '6em' }}>
             <h4 className="" style={{ color: 'black', fontWeight: 'bold'}}>FOLLOW US!</h4>
             <div className="d-flex align-items-center">
                 <img
@@ -51,7 +50,7 @@ export function Footer() {
                 </a>
             </div>
           </div>
-          <div className="col-xl-3 col-12 d-flex flex-column align-items-center justify-content-center" style={{ minHeight: '9em' }}>
+          <div className="col-xl-3 col-md-6 col-12 d-flex flex-column align-items-center justify-content-center" style={{ minHeight: '9em' }}>
               <div className="row pb-2">
                 <a href="https://tec.mx">
                   <img
