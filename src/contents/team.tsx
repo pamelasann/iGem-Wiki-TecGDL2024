@@ -36,17 +36,6 @@ export function Team() {
         </div>
       )}
 
-      <header className="team-header" style={{
-        backgroundImage: `url('https://nsf-gov-resources.nsf.gov/styles/hero_small/s3/2023-04/Andromeda_galaxy_h.jpg.webp?VersionId=ax62fO1jAP93s16R6H_jPKVhTfvwH9X4&itok=WSHuusB5')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        height: '300px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center'
-      }}>
-        <h1 style={{ color: 'white', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.7)' }}>Our Team</h1>
-      </header>
       <div style={{ textAlign: 'center' }}>
         {/* Team Header Quote */}
         <div style={{ padding: '2em 0', fontStyle: 'italic', marginTop: '1em' }}>
@@ -68,68 +57,8 @@ export function Team() {
                   quote: 'I like jazz',
                   imgSrc: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84c855027c41fd27ae641a9bac',
                   linkedIn: 'https://www.linkedin.com/in/antelis/',
-                },                {
-                  name: 'Juan Carlos Bodoque',
-                  role: 'Team manager',
-                  quote: 'I like jazz',
-                  imgSrc: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84c855027c41fd27ae641a9bac',
-                  linkedIn: 'https://www.linkedin.com/in/antelis/',
-                },                {
-                  name: 'Juan Carlos Bodoque',
-                  role: 'Team manager',
-                  quote: 'I like jazz',
-                  imgSrc: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84c855027c41fd27ae641a9bac',
-                  linkedIn: 'https://www.linkedin.com/in/antelis/',
-                },                {
-                  name: 'Juan Carlos Bodoque',
-                  role: 'Team manager',
-                  quote: 'I like jazz',
-                  imgSrc: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84c855027c41fd27ae641a9bac',
-                  linkedIn: 'https://www.linkedin.com/in/antelis/',
-                },                {
-                  name: 'Juan Carlos Bodoque',
-                  role: 'Team manager',
-                  quote: 'I like jazz',
-                  imgSrc: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84c855027c41fd27ae641a9bac',
-                  linkedIn: 'https://www.linkedin.com/in/antelis/',
-                },                {
-                  name: 'Juan Carlos Bodoque',
-                  role: 'Team manager',
-                  quote: 'I like jazz',
-                  imgSrc: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84c855027c41fd27ae641a9bac',
-                  linkedIn: 'https://www.linkedin.com/in/antelis/',
-                },                {
-                  name: 'Juan Carlos Bodoque',
-                  role: 'Team manager',
-                  quote: 'I like jazz',
-                  imgSrc: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84c855027c41fd27ae641a9bac',
-                  linkedIn: 'https://www.linkedin.com/in/antelis/',
-                },                {
-                  name: 'Juan Carlos Bodoque',
-                  role: 'Team manager',
-                  quote: 'I like jazz',
-                  imgSrc: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84c855027c41fd27ae641a9bac',
-                  linkedIn: 'https://www.linkedin.com/in/antelis/',
-                },                {
-                  name: 'Juan Carlos Bodoque',
-                  role: 'Team manager',
-                  quote: 'I like jazz',
-                  imgSrc: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84c855027c41fd27ae641a9bac',
-                  linkedIn: 'https://www.linkedin.com/in/antelis/',
-                },                {
-                  name: 'Juan Carlos Bodoque',
-                  role: 'Team manager',
-                  quote: 'I like jazz',
-                  imgSrc: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84c855027c41fd27ae641a9bac',
-                  linkedIn: 'https://www.linkedin.com/in/antelis/',
-                },                {
-                  name: 'Juan Carlos Bodoque',
-                  role: 'Team manager',
-                  quote: 'I like jazz',
-                  imgSrc: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84c855027c41fd27ae641a9bac',
-                  linkedIn: 'https://www.linkedin.com/in/antelis/',
                 },
-                // Repeat member objects as needed...
+                // Repite los objetos de miembro según sea necesario...
               ].map((member, index) => (
                 <div className="col-lg-4 col-md-6 col-8" key={index}>
                   <div style={{
@@ -140,8 +69,8 @@ export function Team() {
                     margin: '1.5em',
                     transition: 'transform 0.3s', // Smooth transition for hover effect
                   }}
-                  onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.05)')}
-                  onMouseLeave={e => (e.currentTarget.style.transform = 'scale(1)')}
+                    onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.05)')}
+                    onMouseLeave={e => (e.currentTarget.style.transform = 'scale(1)')}
                   >
                     <div style={{ textAlign: 'center', padding: '2em' }}>
                       <img
