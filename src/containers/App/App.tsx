@@ -60,13 +60,14 @@ const App = () => {
             }
           />
         </Routes>
+        
       </Layout>
-
+      {/* Back to Top Button */}
+      <BackToTop />
       {/* Footer */}
       <Footer />
 
-      {/* Back to Top Button */}
-      <BackToTop />  
+
     </>
   );
 };
