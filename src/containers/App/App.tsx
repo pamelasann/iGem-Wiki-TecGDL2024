@@ -1,16 +1,17 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { Footer, Header, Navbar, NotFound } from "../../components";
 import { getPathMapping, stringToSlug } from "../../utils";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Layout from "../../components/Layout";
 import ScrollProgressBar from "../../components/Scrolling";
 import BackToTop from "../../components/Top";
-//import { Team } from "./Team"; // Import the Team page
+import Loading from "../../components/Loading"; // Import the Loading component
 
 const App = () => {
   const pathMapping = getPathMapping();
+  const location = useLocation();  
   const currentPath =
     location.pathname
       .split(`${stringToSlug(import.meta.env.VITE_TEAM_NAME)}`)
@@ -20,9 +21,24 @@ const App = () => {
   const title =
     currentPath in pathMapping ? pathMapping[currentPath].title : "Not Found";
 
+
+  const [loading, setLoading] = useState(false); // State to manage loading
+
   useEffect(() => {
     document.title = `${title || ""} | ${import.meta.env.VITE_TEAM_NAME} - iGEM ${import.meta.env.VITE_TEAM_YEAR}`;
   }, [title]);
+
+  useEffect(() => {
+    // Set loading to true when the component mounts
+    setLoading(true);
+
+    // Hide loading after a brief timeout to simulate loading time
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000); // Adjust this timeout as needed
+
+    return () => clearTimeout(timer);
+  }, [location.pathname]); // Run this effect on location changes
 
   return (
     <>
@@ -31,6 +47,9 @@ const App = () => {
 
       {/* Navigation */}
       <Navbar />
+
+      {/* Loading Screen */}
+      {loading && <Loading />}
 
       {/* Layout for PageContent (no automatic Header) */}
       <Layout>
@@ -54,8 +73,6 @@ const App = () => {
               />
             )
           )}
-          {/* Special route for Team */}
-          
           {/* Fallback route for Not Found */}
           <Route
             path="*"
@@ -70,14 +87,12 @@ const App = () => {
             }
           />
         </Routes>
-        
       </Layout>
+
       {/* Back to Top Button */}
       <BackToTop />
       {/* Footer */}
       <Footer />
-
-
     </>
   );
 };
