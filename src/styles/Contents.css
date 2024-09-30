@@ -1,7 +1,17 @@
 @font-face {
     font-family: 'Nunito';
     src:url(https://static.igem.wiki/teams/5439/fonts/nunito-variablefont-wght.ttf);
-  }
+}
+
+@font-face {
+    font-family: 'Montserrat-bold';
+    src:url(https://static.igem.wiki/teams/5439/fonts/montserrat-bold.ttf);
+}
+
+@font-face {
+    font-family: 'Montserrat-black';
+    src:url(https://static.igem.wiki/teams/5439/fonts/montserrat-black.ttf);
+}
 
 .main-container {
     width: 100%;
@@ -9,21 +19,39 @@
 }
 
 #header-container {
-    background-size: contain; 
+    background-size: cover; 
     background-repeat: no-repeat;
-    height: 600px;
-    width: 100%;   
+    display: flex;
+    align-items: center;
+}
+
+#header-container::after {
+    content: "";
+    display: block;
+    padding-bottom: 33%;
+}
+
+@keyframes glow{
+    from{text-shadow:0px 0px 1px #fff,0px 0px 3px #614ad3;}
+    to{text-shadow:0px 0px 10px #fff,0px 0px 20px #614ad3;}
 }
 
 #header-title {
-    font-family: Verdana, Arial, sans-serif;
-    font-size: 6.5em;
+    font-family: 'Montserrat-black', Verdana, Arial, sans-serif;
+    font-size: 2.5em;
+    padding-left: 0.1em;
+    color: #7975d0;
+    animation-name: glow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transition: font-size 3s ease, padding-left 0.3s ease;
 }
 
 #menu-container {
-    font-family: Verdana, Helvetica, Arial, sans-serif;
-    font-size: 1.2em;
-    font-weight: 200;
+    font-family: 'Nunito', Verdana, Helvetica, Arial, sans-serif;
+    font-size: 1.1em;
+    font-weight: 600;
     padding-left: 20px;
 }
 
@@ -35,37 +63,122 @@
 #menu-container a:hover {
     text-decoration: none;
     color: #7975d0;
+    transition: color 0.3s ease;
 }
 
 #titles-container {
     position: sticky;
     top: 0;
-    padding-top: 3em;
-    line-height: 1.8;
+    padding-top: 5.5em;
+    line-height: 1.5;
+}
+
+#titles-container .subtitle {
+    color: rgb(90, 90, 90);
+    font-size: 0.9em;
 }
 
 #text-content {
-    box-shadow: 0px 0px 30px 20px rgb(189, 189, 217);
+    background-color: rgba(255, 255, 255, 0.5); 
+    box-shadow: 0px 0px 50px 0px rgb(255, 255, 255);
+    padding: 0.5em;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
 }
 
 #text-content h1 {
-    font-family: Verdana, Helvetica, Arial, sans-serif;
-    font-size: 3em;
-    padding-bottom: 0.7em;
+    font-family: 'Montserrat-bold', Verdana, Helvetica, Arial, sans-serif;
+    font-size: 2em;
+    padding-bottom: 0.5em;
+    transition: font-size 0.3s ease, padding-left 0.3s ease;
 }
 
 #text-content h2 {
-    font-family: Helvetica, Verdana, Arial, sans-serif;
-    font-size: 2em;
+    font-family:'Montserrat-bold', Verdana, Helvetica, Arial, sans-serif;
+    font-size: 1.5em;
     padding-bottom: 0.3em;
+    transition: font-size 0.3s ease, padding-left 0.3s ease;
 }
 
 #text-content p {
     font-family: 'Nunito', Verdana, Helvetica, Arial, sans-serif;
-    font-size: 1.2em;
+    font-size: 1.1em;
+    text-align: justify;
 }
 
-/** #logo-link handles the home/logo on navbar link tag <a>   **/
 #logo-link {
     text-decoration: none;
+}
+
+#main-content-container {
+    padding: 0;
+}
+
+#footer-title {
+    font-size: 2.5em;
+}
+
+#footer-subtitle h4 {
+    font-size: 1.3em;
+}
+#footer-subtitle {
+    font-size: 0.9em;
+}
+
+@media screen and (min-width: 993px) {
+    #header-title {
+        font-size: 5em;
+        padding-left: 0.8em;
+    }
+    #text-content h1 {
+        font-size: 3em;
+    }
+    
+    #text-content h2 {
+        font-size: 2em;
+    }
+    #main-content-container {
+        padding: 3em;
+    }
+    #text-content {
+        background-color: rgba(255, 255, 255, 0.8); 
+        box-shadow: 0px 0px 30px 20px rgb(189, 189, 217);
+        padding: 3em;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    #header-title {
+        font-size: 4em;
+        padding-left: 0.7em;
+    }
+    #text-content h1 {
+        font-size: 2.5em;
+    }
+    #text-content h2 {
+        font-size: 1.7em;
+    }
+    #main-content-container {
+        padding: 2em;
+    }
+    #text-content {
+        background-color: rgba(255, 255, 255, 0.7); 
+        box-shadow: 0px 0px 30px 20px rgb(205, 205, 225);
+        padding: 2em;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    #header-title {
+        font-size: 3em;
+        padding-left: 0.4em;
+    }
+    #main-content-container {
+        padding: 1em;
+    }
+}
+
+@media screen and (max-width: 994px) {
+    #menu-container {
+        display: none;
+    }
 }

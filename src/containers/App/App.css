@@ -62,19 +62,13 @@ footer a {
   text-decoration: none;
 }
 
-footer a:hover {
-  color: white;
-  text-decoration: underline;
-}
-
-/* Font Face */
 @font-face {
-  font-family: 'Anton';
-  src: url(https://static.igem.wiki/teams/5439/fonts/titanone-regular.ttf);
+  font-family: 'Nunito';
+  src:url(https://static.igem.wiki/teams/5439/fonts/nunito-variablefont-wght.ttf);
 }
 
 #title-font {
-  font-family: 'Anton', Helvetica, sans-serif;
+  font-family: 'Nunito', Helvetica, sans-serif;
   letter-spacing: 1px;
 }
 
@@ -236,4 +230,10 @@ body.no-scroll {
   #attribution-text {
     text-align: center !important;
   }
+}
+
+/* Scrollbar css */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #7975d0 #f1f1f1;
 }

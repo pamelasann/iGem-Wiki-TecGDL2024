@@ -54,11 +54,11 @@ const Pages: (Page | Folder)[] = [
         title: "Contribution",
         path: "/contribution",
         component: Contribution,
-        backgroundImage: "https://static.igem.wiki/teams/5439/banner/home.gif", 
+        backgroundImage: "https://static.igem.wiki/teams/5439/banner/bannerwikihome1680x640.gif", 
       },
       {
         name: "Description",
-        title: "Project Description",
+        title: "Description",
         path: "/description",
         component: Description,
         backgroundImage: "https://static.igem.wiki/teams/5439/banner/home.gif", 
