@@ -317,3 +317,27 @@ body.no-scroll {
     display: none;
   }
 }
+
+.indent {
+  padding-left: 20px; /* Adjust the value as needed */
+}
+
+.sidebar-item {
+  position: relative;
+  padding-left: 20px; /* Adjust as needed */
+}
+
+.sidebar-item.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px; /* Adjust as needed */
+  background-color: #007bff; /* Adjust color as needed */
+}
+
+.sidebar-item.active > a {
+  font-weight: bold;
+  color: #007bff; /* Adjust color as needed */
+}
