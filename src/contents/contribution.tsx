@@ -1,47 +1,19 @@
 export function Contribution() {
   return (
     <>
-    <div className="container-fluid p-3">
-        <div className="row">
-          <div className="col-lg-3 col-md-12 pt-5 ps-5" id="menu-container">
-            <div id="titles-container">
-              <ul className="list-unstyled">
-                <li className="ps-4">
-                  <a href="#part1">Title</a>
-                  <ul className="list-unstyled">
-                    <li className="ps-4">
-                      <a href="#part1.1" className="subtitle">Subtitle 1</a>
-                    </li>
-                    <li className="ps-4">
-                      <a href="#part1.2" className="subtitle">Subtitle 2</a>
-                    </li>
-                  </ul>
-                </li>
-                <li className="ps-4">
-                  <a href="#">Title 2</a>
-                  <ul className="list-unstyled">
-                    <li className="ps-4">
-                      <a href="#" className="subtitle">Subtitle 1</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+    {/* Simple Content */}
+    <div className="container-fluid p-3 justify-content-center align-items-center" id="simple-content">
+        <div className="col-lg-9 col-md-12" id="main-content-container">
+          <div className="container-fluid" id="text-content">
+            <div className="container-fluid p-3 mt-5">
+              <h1 className="mb-3">Our contribution to the iGEM community</h1>
             </div>
-          </div>
-          {/* Content */}
-          <div className="col-lg-9 col-md-12" id="main-content-container">
-            <div className="container-fluid" id="text-content">
-              <div className="container-fluid p-3 mt-5" id="part1">
-                <h1 className="mb-3">Title</h1>
-                <p>Paragraph</p>
-                <br></br>
-                <p>Paragraph</p>
-              </div>
-              <div className="container-fluid p-3" id="part1.1">
-                <h2>Subtitle</h2>
-                <p>Paragraph</p>
-                <br></br>
-                <p>Paragraph</p>
+            <div className="container-fluid p-3">
+              <h2>Fundraising guide</h2>
+              <p>As part of our contribution to the IGEM community, the TecMonterreyGDL team presents a fundraising guide designed to help other IGEM teams understand the key aspects to consider when participating in this great competition. This guide aims to support them in achieving successful funding, ensuring that the entire team can attend the Grand Jamboree with as few obstacles as possible.</p>
+              <br></br>
+              <div className="d-flex justify-content-center align-items-center">
+                <iframe src="https://static.igem.wiki/teams/5439/documents/fundraising-guide-igem-2024-by-tecmonterreygdl-neotech-e.pdf" id="pdf-viewer"></iframe>
               </div>
             </div>
           </div>
