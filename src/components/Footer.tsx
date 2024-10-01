@@ -45,7 +45,7 @@ export function Footer() {
                   alt="Instagram"
                   style={{ width: '1.5em', height: 'auto'}}
                 />
-                <a href="https://www.instagram.com/igem.tecgdl" target="_blank" rel="noopener noreferrer" style={{color: 'black', fontWeight:'normal', marginLeft: '0.2em',}}> 
+                <a href="https://www.instagram.com/igem.tecgdl" target="_blank" rel="noopener noreferrer" id="instagram-link"> 
                   igem.tecgdl
                 </a>
             </div>
