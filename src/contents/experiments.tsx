@@ -1,3 +1,7 @@
+import React from "react"
+//import 'katex/dist/katex.min.css';  // Importa KaTeX para las ecuaciones LaTeX
+import { BlockMath } from 'react-katex';  // Componente para mostrar ecuaciones
+
 export function Experiments() {
   return (
     <>
@@ -180,77 +184,49 @@ export function Experiments() {
                 <li>Mix the reaction components gently and spin down for a few seconds to collect the contents at the bottom of the tube, according following table:</li>
                 {/* Table Section */}
                 <div className="table">
-                  <table>
-                    <caption>Table 2 Fitting constants</caption>
-                    <thead>
-                      <tr>
-                        <th>Times</th>
-                        <th>$C_1$ origin</th>
-                        <th>$\gamma$ origin</th>
-                        <th>$r$ origin</th>
-                        <th>$C_1$ converge</th>
-                        <th>$\gamma$ converge</th>
-                        <th>$r$ converge</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+                <table>
+                  <thead>
+                    <tr>
+                      <th colSpan={2} className="table-title">
+                        Table 1. Components and volumes for the restriction digestion protocol.
+                      </th>
+                    </tr>
+                    <tr>
+                      <th>Component</th>
+                      <th>Volume</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Restriction Enzyme 10X Buffer</td>
+                      <td>2 μL</td>
+                    </tr>
+                    <tr>
+                      <td>DNA (1 μg/μL)</td>
+                      <td>1 μL</td>
+                    </tr>
+                    <tr>
+                      <td>Restriction Enzyme</td>
+                      <td>1 μL</td>
+                    </tr>
+                    <tr>
+                      <td>BSA (10 μg/μL)</td>
+                      <td>0.2 μL</td>
+                    </tr>
+                    <tr>
+                      <td>Nuclease free water</td>
+                      <td>To 20 μL</td>
+                    </tr>
+                    <tr>
+                      <td>Total Volume</td>
+                      <td>20 μL</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+
+
                 <li>Incubate the reaction at 37°C for 1-16 hours. The incubation time depends on the extent of digestion required.</li>
                 <li>Terminate the reaction by incubating the reaction at 65° for 20 minutes to inactivate the EcorRI enzyme.</li>
               </ol>
@@ -262,151 +238,101 @@ export function Experiments() {
                 <li>Assemble reaction components in a 0.2 mL PCR tube on ice and transfer the reaction mixture to the thermocycler.</li>
                 {/* Table Section */}
                 <div className="table">
-                  <table>
-                    <caption>Table 2 Fitting constants</caption>
-                    <thead>
-                      <tr>
-                        <th>Times</th>
-                        <th>$C_1$ origin</th>
-                        <th>$\gamma$ origin</th>
-                        <th>$r$ origin</th>
-                        <th>$C_1$ converge</th>
-                        <th>$\gamma$ converge</th>
-                        <th>$r$ converge</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+                <table>
+                  <thead>
+                    <tr>
+                      <th colSpan={2} className="table-title">
+                        Table 2. Components and volumes for the PCR with DreamTaq polymerase protocol.
+                      </th>
+                    </tr>
+                    <tr>
+                      <th>Component</th>
+                      <th>Volume</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>10X DreamTaq buffer</td>
+                      <td>5 μL</td>
+                    </tr>
+                    <tr>
+                      <td>dNTP Mix (10 mM each)</td>
+                      <td>1 μL</td>
+                    </tr>
+                    <tr>
+                      <td>Upstream primer 10 μM</td>
+                      <td>1 μL</td>
+                    </tr>
+                    <tr>
+                      <td>Downstream primer 10 μM</td>
+                      <td>1 μL</td>
+                    </tr>
+                    <tr>
+                      <td>DNA template</td>
+                      <td>10 pg - 1 μg</td>
+                    </tr>
+                    <tr>
+                      <td>DreamTaq Polymerase</td>
+                      <td>0.25 μL</td>
+                    </tr>
+                    <tr>
+                      <td>Nuclease-free water</td>
+                      <td>To 50 μL</td>
+                    </tr>
+                    <tr>
+                      <td>Total volume</td>
+                      <td>50 μL</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
                 <li>Configure thermocycler according to the length of the amplicon and the annealing temperature of the primers. The annealing temperature was first calculated using <a href="https://tmcalculator.neb.com/#!/main">NEB's Tm calculator</a>, then further optimized experimentally.</li>
                 {/* Table Section */}
                 <div className="table">
-                  <table>
-                    <caption>Table 2 Fitting constants</caption>
-                    <thead>
-                      <tr>
-                        <th>Times</th>
-                        <th>$C_1$ origin</th>
-                        <th>$\gamma$ origin</th>
-                        <th>$r$ origin</th>
-                        <th>$C_1$ converge</th>
-                        <th>$\gamma$ converge</th>
-                        <th>$r$ converge</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+                <table>
+                  <thead>
+                    <tr>
+                      <th colSpan={3} className="table-title">
+                        Table 3. DreamTaq polymerase PCR settings.
+                      </th>
+                    </tr>
+                    <tr>
+                      <th>Stage</th>
+                      <th>Cycles</th>
+                      <th>Conditions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Initial denaturation</td>
+                      <td>1</td>
+                      <td>2 min, 95 °C</td>
+                    </tr>
+                    <tr>
+                      <td>Denaturation</td>
+                      <td>30x</td>
+                      <td>30 s, 95 °C</td>
+                    </tr>
+                    <tr>
+                      <td>Annealing</td>
+                      <td>30x</td>
+                      <td>Variable temperature, 30s-1 min</td>
+                    </tr>
+                    <tr>
+                      <td>Extension</td>
+                      <td>30x</td>
+                      <td>1 min/kb, 72 °C</td>
+                    </tr>
+                    <tr>
+                      <td>Final extension</td>
+                      <td>1</td>
+                      <td>5 min, 72 °C</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
                 <li>After completion, visualize PCR products in an agarose gel to confirm correct amplification.</li>
               </ol>
 
@@ -417,151 +343,93 @@ export function Experiments() {
                 <li>Assemble reaction components in a 0.2 mL PCR tube on ice and transfer reaction mixture to the thermocycler.</li>
                 {/* Table Section */}
                 <div className="table">
-                  <table>
-                    <caption>Table 2 Fitting constants</caption>
-                    <thead>
-                      <tr>
-                        <th>Times</th>
-                        <th>$C_1$ origin</th>
-                        <th>$\gamma$ origin</th>
-                        <th>$r$ origin</th>
-                        <th>$C_1$ converge</th>
-                        <th>$\gamma$ converge</th>
-                        <th>$r$ converge</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+                <table>
+                  <thead>
+                    <tr>
+                      <th colSpan={3} className="table-title">
+                        Table 4. Components and volumes for the PCR with GoTaq Green Master Mix protocol.
+                      </th>
+                    </tr>
+                    <tr>
+                      <th>Component</th>
+                      <th>Volume</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>GoTaq Green Master Mix 2X</td>
+                      <td>25 μL</td>
+                    </tr>
+                    <tr>
+                      <td>Upstream primer 10μM</td>
+                      <td>1 μL</td>
+                    </tr>
+                    <tr>
+                      <td>Downstream primer 10 μM</td>
+                      <td>1 μL</td>
+                    </tr>
+                    <tr>
+                      <td>DNA template</td>
+                      <td>&lt;250 ng</td>
+                    </tr>
+                    <tr>
+                      <td>Nuclease-free water</td>
+                      <td>To 50 μL</td>
+                    </tr>
+                    <tr>
+                      <td>Total volume</td>
+                      <td>50 μL</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
                 <li>Configure thermocycler according to the length of the amplicon and the annealing temperature of the primers. The annealing temperature was first calculated using <a href="https://tmcalculator.neb.com/#!/main">NEB's Tm calculator</a>, then further optimized experimentally.</li>
                 {/* Table Section */}
                 <div className="table">
-                  <table>
-                    <caption>Table 2 Fitting constants</caption>
-                    <thead>
-                      <tr>
-                        <th>Times</th>
-                        <th>$C_1$ origin</th>
-                        <th>$\gamma$ origin</th>
-                        <th>$r$ origin</th>
-                        <th>$C_1$ converge</th>
-                        <th>$\gamma$ converge</th>
-                        <th>$r$ converge</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+                <table>
+                  <thead>
+                    <tr>
+                      <th colSpan={3} className="table-title">
+                        Table 5. GoTaq Green Master Mix PCR settings.
+                      </th>
+                    </tr>
+                    <tr>
+                      <th>Stage</th>
+                      <th>Cycles</th>
+                      <th>Conditions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Initial denaturation</td>
+                      <td></td>
+                      <td>2 min, 95 °C</td>
+                    </tr>
+                    <tr>
+                      <td>Denaturation</td>
+                      <td>30x</td>
+                      <td>30 s, 95 °C</td>
+                    </tr>
+                    <tr>
+                      <td>Annealing</td>
+                      <td>30x</td>
+                      <td>Variable temperature, 30s-1 min</td>
+                    </tr>
+                    <tr>
+                      <td>Extension</td>
+                      <td>30x</td>
+                      <td>1 min/kb, 72 °C</td>
+                    </tr>
+                    <tr>
+                      <td>Final extension</td>
+                      <td></td>
+                      <td>5 min, 72 °C</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
                 <li>After completion, visualize PCR products in an agarose gel to confirm correct amplification.</li>
               </ol>
 
@@ -575,77 +443,34 @@ export function Experiments() {
                 <li>Add gel solubilization Buffer (L3) to the excised gel in the tube size indicated in the following table:</li>
                 {/* Table Section */}
                 <div className="table">
-                  <table>
-                    <caption>Table 2 Fitting constants</caption>
-                    <thead>
-                      <tr>
-                        <th>Times</th>
-                        <th>$C_1$ origin</th>
-                        <th>$\gamma$ origin</th>
-                        <th>$r$ origin</th>
-                        <th>$C_1$ converge</th>
-                        <th>$\gamma$ converge</th>
-                        <th>$r$ converge</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+                <table>
+                  <thead>
+                    <tr>
+                      <th colSpan={3} className="table-title">
+                        Table 6. Reagent volumes depending on agarose percentage in your sample.
+                      </th>
+                    </tr>
+                    <tr>
+                      <th>Gel</th>
+                      <th>Tube</th>
+                      <th>Buffer L3 Volume</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2% agarose</td>
+                      <td>1.7-mL polypropylene</td>
+                      <td>3:1 (i.e., 1.2 mL Buffer L3: 400 mg gel pieces)</td>
+                    </tr>
+                    <tr>
+                      <td>&gt;2% agarose</td>
+                      <td>5-mL polypropylene</td>
+                      <td>6:1 (i.e., 2.4 mL Buffer L3: 400 mg gel pieces)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
                 <li>Place the tube with the gel slice and Buffer L3 into a 50°C water bath or heat block. Incubate the tube at 50°C for 10 minutes. Invert the tube every 3 minutes to mix and ensure gel dissolution.</li>
                 <li>After the gel slice appears dissolved, incubate the tube for an additional 5 minutes.</li>
                 <li>Optional: for optimal DNA yields, add 1 gel volume of isopropanol to the dissolved gel slice. Mix well.</li>
@@ -691,77 +516,43 @@ export function Experiments() {
                 <li>Assemble the following reaction on ice:</li>
                 {/* Table Section */}
                 <div className="table">
-                  <table>
-                    <caption>Table 2 Fitting constants</caption>
-                    <thead>
-                      <tr>
-                        <th>Times</th>
-                        <th>$C_1$ origin</th>
-                        <th>$\gamma$ origin</th>
-                        <th>$r$ origin</th>
-                        <th>$C_1$ converge</th>
-                        <th>$\gamma$ converge</th>
-                        <th>$r$ converge</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+                <table>
+                  <thead>
+                    <tr>
+                      <th colSpan={3} className="table-title">
+                        Table 7. Components and volumes for the ligation with Invitrogen T4 ligase protocol.
+                      </th>
+                    </tr>
+                    <tr>
+                      <th>Component</th>
+                      <th>Volume</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Linearized vector DNA</td>
+                      <td>20-100 ng</td>
+                    </tr>
+                    <tr>
+                      <td>Insert DNA</td>
+                      <td>1:1 - 5:1 molar ratio over vector</td>
+                    </tr>
+                    <tr>
+                      <td>10X T4 Buffer</td>
+                      <td>2 μL</td>
+                    </tr>
+                    <tr>
+                      <td>T4 ligase</td>
+                      <td>1 Weiss U</td>
+                    </tr>
+                    <tr>
+                      <td>Nuclease-free water</td>
+                      <td>To 20 μL</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
                 <li>Incubate for 1 hour at 22 °C.</li>
                 <li>Use up to 5 μL of the mixture to transform 50 μL of chemically competent cells or 1-2 μL per 50 μL of electrocompetent cells. Electrotransformation efficiency may be improved by inactivation at 65 °C for 10 min.</li>
               </ol>
@@ -773,77 +564,44 @@ export function Experiments() {
                 <li>Assemble the following reaction on ice:</li>
                 {/* Table Section */}
                 <div className="table">
-                  <table>
-                    <caption>Table 2 Fitting constants</caption>
-                    <thead>
-                      <tr>
-                        <th>Times</th>
-                        <th>$C_1$ origin</th>
-                        <th>$\gamma$ origin</th>
-                        <th>$r$ origin</th>
-                        <th>$C_1$ converge</th>
-                        <th>$\gamma$ converge</th>
-                        <th>$r$ converge</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+                <table>
+                  <thead>
+                    <tr>
+                      <th colSpan={3} className="table-title">
+                        Table 8. Components and volumes for the Gibson Assembly protocol.
+                      </th>
+                    </tr>
+                    <tr>
+                      <th>Component</th>
+                      <th>2-3 fragment assembly</th>
+                      <th>Positive Control</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Total amount of fragments</td>
+                      <td>0.02-0.5 pmol *</td>
+                      <td>10 μL</td>
+                    </tr>
+                    <tr>
+                      <td>Gibson Assembly 2X Master Mix</td>
+                      <td>10 μL **</td>
+                      <td>10 μL</td>
+                    </tr>
+                    <tr>
+                      <td>Nuclease-Free Water</td>
+                      <td>To 20 μL</td>
+                      <td>0 μL</td>
+                    </tr>
+                    <tr>
+                      <td>Total Volume</td>
+                      <td>20 μL</td>
+                      <td>20 μL</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
                 <p>* Optimal efficiency is 100 ng of vector with 2-3 fold molar excess of each insert</p>
                 <p>** Provided there is a high enough concentration of each fragment, 5 μL of Gibson Assembly Master Mix may be used instead. In such a case, the total volume is 10 μL.</p>
                 <li>Incubate at 50 °C for 1 hour. Following the incubation store at -20 °C.</li>
@@ -857,152 +615,98 @@ export function Experiments() {
                 <li>Assemble reaction components in a 0.2 mL PCR tube on ice:</li>
                 {/* Table Section */}
                 <div className="table">
-                  <table>
-                    <caption>Table 2 Fitting constants</caption>
-                    <thead>
-                      <tr>
-                        <th>Times</th>
-                        <th>$C_1$ origin</th>
-                        <th>$\gamma$ origin</th>
-                        <th>$r$ origin</th>
-                        <th>$C_1$ converge</th>
-                        <th>$\gamma$ converge</th>
-                        <th>$r$ converge</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+                <table>
+                  <thead>
+                    <tr>
+                      <th colSpan={3} className="table-title">
+                        Table 9. Components and volumes for the colony PCR protocol.
+                      </th>
+                    </tr>
+                    <tr>
+                      <th>Component</th>
+                      <th>Volume</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>10X DreamTaq buffer</td>
+                      <td>5 μL</td>
+                    </tr>
+                    <tr>
+                      <td>dNTP Mix (10 mM each)</td>
+                      <td>1 μL</td>
+                    </tr>
+                    <tr>
+                      <td>Upstream primer 10 μM</td>
+                      <td>1 μL</td>
+                    </tr>
+                    <tr>
+                      <td>Downstream primer 10 μM</td>
+                      <td>1 μL</td>
+                    </tr>
+                    <tr>
+                      <td>DreamTaq Polymerase</td>
+                      <td>0.25 μL</td>
+                    </tr>
+                    <tr>
+                      <td>Nuclease-free water</td>
+                      <td>To 50 μL</td>
+                    </tr>
+                    <tr>
+                      <td>Total volume</td>
+                      <td>50 μL</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
                 <li>Pick an isolated colony with a sterile micropipette tip and place it in the PCR tube for 15 seconds.</li>
                 <li>Configure thermocycler according to the length of the amplicon and the annealing temperature of the primers. The annealing temperature was first calculated using <a href="https://tmcalculator.neb.com/#!/main">NEB's Tm calculator</a>, then further optimized experimentally.</li>
                 {/* Table Section */}
                 <div className="table">
-                  <table>
-                    <caption>Table 2 Fitting constants</caption>
-                    <thead>
-                      <tr>
-                        <th>Times</th>
-                        <th>$C_1$ origin</th>
-                        <th>$\gamma$ origin</th>
-                        <th>$r$ origin</th>
-                        <th>$C_1$ converge</th>
-                        <th>$\gamma$ converge</th>
-                        <th>$r$ converge</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+                <table>
+                  <thead>
+                    <tr>
+                      <th colSpan={3} className="table-title">
+                        Table 10. Colony PCR settings.
+                      </th>
+                    </tr>
+                    <tr>
+                      <th>Stage</th>
+                      <th>Cycles</th>
+                      <th>Conditions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Initial denaturation</td>
+                      <td></td>
+                      <td>10 min, 95 °C</td>
+                    </tr>
+                    <tr>
+                      <td>Denaturation</td>
+                      <td>30x</td>
+                      <td>30 s, 95 °C</td>
+                    </tr>
+                    <tr>
+                      <td>Annealing</td>
+                      <td>30x</td>
+                      <td>Variable temperature, 30s-1 min</td>
+                    </tr>
+                    <tr>
+                      <td>Extension</td>
+                      <td>30x</td>
+                      <td>1 min/kb, 72 °C</td>
+                    </tr>
+                    <tr>
+                      <td>Final extension</td>
+                      <td></td>
+                      <td>5 min, 72 °C</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
                 <li>After completion, visualize PCR products in an agarose gel to confirm correct amplification.</li>
               </ol>
 
@@ -1028,85 +732,6 @@ export function Experiments() {
                 <li>Transfer to ice and let cool before loading gel.</li>
                 <li>Load gel (15 μL per well). The gel ran at 90 V for 3 hours.</li>
               </ol>
-
-
-
-
-
-
-                {/* Table Section */}
-                <div className="table">
-                  <table>
-                    <caption>Table 2 Fitting constants</caption>
-                    <thead>
-                      <tr>
-                        <th>Times</th>
-                        <th>$C_1$ origin</th>
-                        <th>$\gamma$ origin</th>
-                        <th>$r$ origin</th>
-                        <th>$C_1$ converge</th>
-                        <th>$\gamma$ converge</th>
-                        <th>$r$ converge</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>0.221747</td>
-                        <td>0.117418</td>
-                        <td>0.296676</td>
-                        <td>0.007803174</td>
-                        <td>0.049709744</td>
-                        <td>0.140243978</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
 
 
               

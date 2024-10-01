@@ -131,7 +131,7 @@ body.no-scroll {
   text-align: center; /* Center the text */
 }
 
-
+/* Table Styles */
 /* Table Styles */
 .table {
   width: 100%;
@@ -139,6 +139,8 @@ body.no-scroll {
   margin: 15px 0;
   position: relative;
   padding: 0 5%;
+  border-top-left-radius: 8px; /* Bordes redondeados en la parte superior */
+  border-top-right-radius: 8px; /* Bordes redondeados en la parte superior */
 }
 
 .table table {
@@ -147,6 +149,8 @@ body.no-scroll {
   text-align: center;
   perspective: 500px;
   transform-style: preserve-3d;
+  border: 2px solid #7975d5; /* Add border to the outside of the table */
+  
 }
 
 .table table caption {
@@ -155,6 +159,7 @@ body.no-scroll {
   overflow: hidden;
   font-size: 1em;
   padding: 0.5em 0;
+  border-bottom: none; /* Remove bottom border */
 }
 
 .table table tr {
@@ -208,6 +213,7 @@ body.no-scroll {
   font-family: Nunito-Bold, sans-serif;
   color: var(--dg);
   background-color: var(--lg);
+  border-bottom: none; /* Ensure no border at the bottom */
 }
 
 .table table tr {
@@ -241,6 +247,47 @@ body.no-scroll {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   cursor: pointer; /* Change cursor on hover */
 }
+
+/* Prevent title cell from changing on hover */
+.table table tr:hover th:first-child {
+  transform: none;
+}
+
+/* Prevent second column from increasing size on hover */
+.table table tr:hover td:nth-child(2) {
+  transform: none;
+}
+
+/* Change background color of second row on hover */
+.table table tr:nth-child(2):hover {
+  transform: none;
+  background-color: var(--lg);
+}
+
+/* Increase size of all cells on hover */
+.table table tr:hover td {
+  transform: scale(1.1);
+}
+
+/* Ensure all cells increase in size on hover */
+.table table tr:hover td, .table table tr:hover th {
+  transform: scale(1.1);
+}
+
+/* Remove hover effect from table title */
+.table-title {
+  font-size: 1em; /* Tamaño de fuente */
+  background-color: #7975d5; /* Color de fondo */
+  color: white; /* Color del texto */
+  border-top-left-radius: 8px; /* Bordes redondeados en la parte superior */
+  border-top-right-radius: 8px; /* Bordes redondeados en la parte superior */
+  padding: 10px; /* Espaciado interno */
+  text-align: center; /* Centrar el texto */
+  border-bottom: none; /* Remove bottom border */
+  pointer-events: none; /* Disable hover effect */
+}
+
+
 
 /* Media Queries */
 @media screen and (max-width: 992px) {
