@@ -298,7 +298,7 @@ export function Hardware() {
                 <br></br>
                 <p>For all the above mentioned, instead of using the TCS34725 sensor, the AS7341 sensor will be used because of the following characteristics:</p>
                 <div className="d-flex justify-content-center align-items-center">
-                    <img src="https://static.igem.wiki/teams/5439/images/table-comparison.jpg" style={{width: '80%'}}></img>
+                    <img src="https://static.igem.wiki/teams/5439/images/table-comparison.jpg" id="simple-image"></img>
                 </div>
                 <br></br>
                 <p>Due to the 11 channels, it captures more information about the light spectrum, which makes it more accurate for precise color analysis, light quality monitoring, and spectral studies in scientific research. It performs more versatile measurements such as material identification, in industry it has applications in precision agriculture, environmental monitoring, scientific, health and welfare  (Ams-OSRAM, 2022).</p>

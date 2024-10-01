@@ -112,6 +112,11 @@
     font-size: 1.1em;
     text-align: justify;
 }
+#text-content li {
+    font-family: 'Nunito', Verdana, Helvetica, Arial, sans-serif;
+    font-size: 1.1em;
+    text-align: justify;
+}
 
 #logo-link {
     text-decoration: none;
@@ -165,6 +170,9 @@
     box-shadow: 4px 4px 12px #7975d0;
     transition: width 0.3s ease, height 0.3s ease;
 }
+#simple-image {
+    width: 95%;
+}
 
 #foot-note {
     color: #7975d0;
@@ -207,6 +215,9 @@
     #content-image-big {
         width: 80%;
     }
+    #simple-image {
+        width: 80%;
+    }
 }
 
 @media screen and (min-width: 769px) and (max-width: 992px) {
@@ -232,6 +243,9 @@
         width: 50%;
     }
     #content-image-big {
+        width: 85%;
+    }
+    #simple-image {
         width: 85%;
     }
 }
