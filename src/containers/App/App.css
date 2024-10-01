@@ -324,20 +324,18 @@ body.no-scroll {
 
 .sidebar-item {
   position: relative;
-  padding-left: 20px; /* Adjust as needed */
 }
 
-.sidebar-item.active::before {
-  content: '';
+.active-indicator {
+  width: 4px;
+  height: 100%;
+  background-color: #007bff; /* Change this to your desired color */
   position: absolute;
   left: 0;
   top: 0;
-  bottom: 0;
-  width: 4px; /* Adjust as needed */
-  background-color: #007bff; /* Adjust color as needed */
 }
 
-.sidebar-item.active > a {
+.active a {
   font-weight: bold;
-  color: #007bff; /* Adjust color as needed */
 }
+
