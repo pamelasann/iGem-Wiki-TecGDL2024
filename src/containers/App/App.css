@@ -339,3 +339,30 @@ body.no-scroll {
   font-weight: bold;
 }
 
+.sidebar-item.active a {
+  font-weight: bold;
+  color: #d4d2f0; /* Use your desired highlight color */
+}
+
+#titles-container {
+  position: relative; /* Ensure the line can position relative to the container */
+}
+
+.active-indicator {
+  position: absolute;
+  left: 0; /* Position the line on the left */
+  width: 4px; /* Adjust width as needed */
+  background-color: #d4d2f0; /* The color of the active line */
+  transition: top 0.3s ease; /* Smooth transition for movement */
+  height: 40px; /* Adjust height to match item height */
+}
+
+.sidebar-item {
+  padding-left: 1rem; /* Adjust padding as needed */
+  margin-bottom: 10px; /* Space between items */
+}
+
+.sidebar-item.active a {
+  font-weight: bold; /* Highlight active item */
+}
+

@@ -11,23 +11,29 @@ const Sidebar: React.FC<SidebarProps> = ({ items }) => {
   const [activeId, setActiveId] = useState<string>("");
 
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = document.querySelectorAll("section");
-      let currentId = "";
-      sections.forEach((section) => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top <= 0 && rect.bottom >= 0) {
-          currentId = section.id;
-        }
-      });
-      setActiveId(currentId);
-    };
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveId(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.5 } // Adjust threshold to determine how much of the element needs to be visible
+    );
 
-    window.addEventListener("scroll", handleScroll);
+    // Observe each section
+    items.forEach((item) => {
+      observer.observe(document.getElementById(item.mainPart.id) as Element);
+      item.subParts.forEach((subItem) => {
+        observer.observe(document.getElementById(subItem.id) as Element);
+      });
+    });
+
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      observer.disconnect(); // Cleanup the observer on component unmount
     };
-  }, []);
+  }, [items]);
 
   return (
     <div id="titles-container">
