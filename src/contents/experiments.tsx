@@ -1,44 +1,56 @@
-import React from "react"
-//import 'katex/dist/katex.min.css';  // Importa KaTeX para las ecuaciones LaTeX
+import React from "react";
+// import 'katex/dist/katex.min.css';  // Importa KaTeX para las ecuaciones LaTeX
 import { BlockMath } from 'react-katex';  // Componente para mostrar ecuaciones
+import Sidebar from './Sidebar';  // Import the Sidebar component
 
 export function Experiments() {
+  const sidebarItems = [
+    {
+      mainPart: { title: "Project Setup", id: "project-setup" },
+      subParts: [
+        { title: "Protocol", id: "protocol" },
+        { title: "Miniprep", id: "miniprep" },
+      ],
+    },
+    {
+      mainPart: { title: "Transformation and Cells", id: "dna-manipulation" },
+      subParts: [
+        { title: "Agarose gel electrophoresis", id: "agarose-gel-electrophoresis" },
+        { title: "Transformation", id: "transformation" },
+        { title: "Cells", id: "cells" },
+        { title: "Restriction digestion", id: "restriction-digestion" },
+      ],
+    },
+    {
+      mainPart: { title: "PCR & Quality control", id: "pcr-quality-control" },
+      subParts: [
+        { title: "DreamTaq polymerase", id: "dreamtaq-polymerase" },
+        { title: "GoTaq Green Master Mix", id: "gotag-green-master-mix" },
+        { title: "Gel extraction", id: "gel-extraction" },
+        { title: "Fluorescent protein washes", id: "Fluorescent" },
+        { title: "PCR purification", id: "pcr-purification" },
+        { title: "Ligation", id: "ligation" },
+        { title: "Gibson Assembly", id: "gibson-assembly" },
+        { title: "Colony PCR", id: "colony-pcr" },
+        { title: "SDS-PAGE gel electrophoresis", id: "sds-page-gel-electrophoresis" },
+      ],
+    },
+  ];
+
   return (
     <>
       <div className="container-fluid p-3">
         <div className="row">
           <div className="col-lg-3 col-md-12 pt-5 ps-5" id="menu-container">
-            <div id="titles-container">
-              <ul className="list-unstyled">
-                <li className="ps-4">
-                  <a href="#part1">Title</a>
-                  <ul className="list-unstyled">
-                    <li className="ps-4">
-                      <a href="#part1.1" className="subtitle">Subtitle 1</a>
-                    </li>
-                    <li className="ps-4">
-                      <a href="#part1.2" className="subtitle">Subtitle 2</a>
-                    </li>
-                  </ul>
-                </li>
-                <li className="ps-4">
-                  <a href="#">Title 2</a>
-                  <ul className="list-unstyled">
-                    <li className="ps-4">
-                      <a href="#" className="subtitle">Subtitle 1</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
+            <Sidebar items={sidebarItems} />
           </div>
           {/* Content */}
           <div className="col-lg-9 col-md-12" id="main-content-container">
             <div className="container-fluid" id="text-content">
-              <div className="container-fluid p-3 mt-5" id="part1">
+              <div className="container-fluid p-3 mt-5" id="project-setup">
                 <h1 className="mb-3">Want to replicate our project?</h1>
               </div>
-              <div className="container-fluid p-3" id="part1.1">
+              <div className="container-fluid p-3" id="protocol">
                 <h2>Protocols</h2>
                 <p>Biological material</p>
                 <ul>
@@ -65,7 +77,7 @@ export function Experiments() {
                 </ul>
               </div>
 
-              <div className="container-fluid p-3 mt-5" id="part2">
+              <div className="container-fluid p-3 mt-5" id="miniprep">
                 <h1 className="mb-3">Miniprep QIAGEN QIAprep Spin kit</h1>
               </div>
               <ol>
@@ -77,30 +89,14 @@ export function Experiments() {
                 <li>Transfer supernatant to a spin column by pipetting (approximately 800 μL). Centrifuge at max speed for 1 min and discard flow-through</li>
                 <li>Add 750 μL Buffer PE. Centrifuge at max speed for 1 min and discard flow-through.</li>
                 <li>Centrifuge at max speed for 1 min.</li>
-                <li>Transfer spin column to a new 1.5 mL microcentrifuge tube. Add 50 μL Buffer EB to the center of the column, incubate for 2 min, and centrifuge at max speed for 1 min. Remove the spin column.</li>
-                <li>Measure plasmid DNA yield in Nanodrop, using as a blank 3 μL of Buffer EB. Store plasmid DNA at -20 °C.</li>
+                <li>Transfer spin column to a new 1.5 mL microcentrifuge tube. Add 50 μL Buffer EB to the.</li>
               </ol>
 
-              <div className="container-fluid p-3 mt-5" id="part3">
-                <h1 className="mb-3">Miniprep Promega Wizard SV kit</h1>
+              <div className="container-fluid p-3 mt-5" id="dna-manipulation">
+                <h1 className="mb-3">Transformation & cells</h1>
               </div>
-              <ol>
-                <li>Pellet 10 mL of overnight culture by centrifugation at 4000 x g for 10 minutes at 4 °C. Pour off supernatant.</li>
-                <li>Add 250 μL of Cell Resuspension Solution and resuspend cells thoroughly by pipetting. Transfer the resuspended cells to a 1.5 mL microcentrifuge tube.</li>
-                <li>Add 250 μL of Cell Lysis Solution and mix by inverting the tube for up to 5 minutes or until the suspension clears.</li>
-                <li>Add 10 μL of Alkaline Protease Solution and mix by inverting the tube 4 times. Incubate for 5 min at room temperature.</li>
-                <li>Add 350 μL of Neutralization Solution and mix by inverting the tube 4 times.</li>
-                <li>Centrifuge the lysate at maximum speed (14000 x g) for 10 min at room temperature. If the lysate does not form a well-defined pellet, centrifuge for an additional 5-10 min.</li>
-                <li>Transfer the lysate (approximately 850 μL) to the spin column by pipetting, avoiding the white precipitate.</li>
-                <li>Centrifuge at max speed for 1 min at room temperature. Discard the flow-through.</li>
-                <li>Add 750 μL of Column Wash Solution and centrifuge at max speed for 1 min. Discard flow-through.</li>
-                <li>Repeat previous step with 250 μL of Column Wash Solution. Centrifuge at max speed for 2 min.</li>
-                <li>Transfer spin column to a new 1.5 mL microcentrifuge tube.</li>
-                <li>Elute by adding 100 μL of nuclease-free water to the center of the spin column. Let stand for 5 min, then centrifuge at max speed for 1 min. Remove the spin column.</li>
-                <li>After elution, measure DNA yield in Nanodrop, using nuclease-free water as a blank. Store plasmid DNA at -20°C.</li>
-              </ol>
 
-              <div className="container-fluid p-3 mt-5" id="part4">
+              <div className="container-fluid p-3 mt-5" id="agarose-gel-electrophoresis">
                 <h1 className="mb-3">Agarose gel electrophoresis</h1>
               </div>
               <ol>
@@ -114,8 +110,7 @@ export function Experiments() {
                 <li>Run the gel with the appropriate voltage. Usually, we run gels at 60 V for 10 min, then 90 V for 45 min.</li>
                 <li>Once it has finished running, transfer the gel to a UV transilluminator and visualize the samples.</li>
               </ol>
-
-              <div className="container-fluid p-3 mt-5" id="part5">
+              <div className="container-fluid p-3 mt-5" id="transformation">
                 <h1 className="mb-3">Transformation by electroporation</h1>
               </div>
               <ol>
@@ -144,8 +139,7 @@ export function Experiments() {
                 <li>Spread 100 μL of cells onto warm plates with appropriate antibiotics.</li>
                 <li>Incubate plates overnight at 37 °C.</li>
               </ol>
-
-              <div className="container-fluid p-3 mt-5" id="part7">
+              <div className="container-fluid p-3 mt-5" id="cells">
                 <h1 className="mb-3">Electrocompetent cells</h1>
               </div>
               <ol>
@@ -176,8 +170,7 @@ export function Experiments() {
                 <li>Resuspend in 2.5 mL of 0.1 M CaCl2 + 15% glycerol.</li>
                 <li>Make 50 μL aliquots in 0.2 mL PCR tubes and store at -80 °C.</li>
               </ol>
-
-              <div className="container-fluid p-3 mt-5" id="part9">
+              <div className="container-fluid p-3 mt-5" id="restriction-digestion">
                 <h1 className="mb-3">Restriction digestion</h1>
               </div>
               <ol>
@@ -230,8 +223,10 @@ export function Experiments() {
                 <li>Incubate the reaction at 37°C for 1-16 hours. The incubation time depends on the extent of digestion required.</li>
                 <li>Terminate the reaction by incubating the reaction at 65° for 20 minutes to inactivate the EcorRI enzyme.</li>
               </ol>
-
-              <div className="container-fluid p-3 mt-5" id="part10">
+              <div className="container-fluid p-3 mt-5" id="pcr-quality-control">
+                <h1 className="mb-3">PCR & Quality Control</h1>
+              </div>
+              <div className="container-fluid p-3 mt-5" id="dreamtaq-polymerase">
                 <h1 className="mb-3">PCR w/DreamTaq polymerase</h1>
               </div>
               <ol>
@@ -332,11 +327,9 @@ export function Experiments() {
                   </tbody>
                 </table>
               </div>
-
-                <li>After completion, visualize PCR products in an agarose gel to confirm correct amplification.</li>
+              <li>After completion, visualize PCR products in an agarose gel to confirm correct amplification.</li>
               </ol>
-
-              <div className="container-fluid p-3 mt-5" id="part11">
+              <div className="container-fluid p-3 mt-5" id="gotag-green-master-mix">
                 <h1 className="mb-3">PCR w/GoTaq Green Master Mix</h1>
               </div>
               <ol>
@@ -432,8 +425,7 @@ export function Experiments() {
 
                 <li>After completion, visualize PCR products in an agarose gel to confirm correct amplification.</li>
               </ol>
-
-              <div className="container-fluid p-3 mt-5" id="part12">
+              <div className="container-fluid p-3 mt-5" id="gel-extraction">
                 <h1 className="mb-3">Gel extraction - Invitrogen PureLink Quick</h1>
               </div>
               <ol>
@@ -476,8 +468,7 @@ export function Experiments() {
                 <li>Optional: for optimal DNA yields, add 1 gel volume of isopropanol to the dissolved gel slice. Mix well.</li>
                 <li>Purify the DNA using a centrifuge or vacuum Manifold.</li>
               </ol>
-
-              <div className="container-fluid p-3 mt-5" id="part13">
+              <div className="container-fluid p-3 mt-5" id="Fluorescent">
                 <h1 className="mb-3">Fluorescent protein washes</h1>
               </div>
               <ol>
@@ -495,8 +486,7 @@ export function Experiments() {
                 <li>Prepare the dilutions in new microcentrifuge tubes</li>
                 <li>Analyze the samples in the device for constructing the calibration curve</li>
               </ol>
-
-              <div className="container-fluid p-3 mt-5" id="part14">
+              <div className="container-fluid p-3 mt-5" id="pcr-purification">
                 <h1 className="mb-3">PCR purification - QIAquick PCR Purification Kit</h1>
               </div>
               <ol>
@@ -508,8 +498,7 @@ export function Experiments() {
                 <li>Add 30 μL Buffer EB to the center of the spin column, let the column stand for 5 min and centrifuge at max speed for 1 min.</li>
                 <li>Measure yield in Nanodrop, using Buffer EB as a blank.</li>
               </ol>
-
-              <div className="container-fluid p-3 mt-5" id="part15">
+              <div className="container-fluid p-3 mt-5" id="ligation">
                 <h1 className="mb-3">Ligation - Invitrogen T4 ligase</h1>
               </div>
               <ol>
@@ -557,7 +546,7 @@ export function Experiments() {
                 <li>Use up to 5 μL of the mixture to transform 50 μL of chemically competent cells or 1-2 μL per 50 μL of electrocompetent cells. Electrotransformation efficiency may be improved by inactivation at 65 °C for 10 min.</li>
               </ol>
 
-              <div className="container-fluid p-3 mt-5" id="part16">
+              <div className="container-fluid p-3 mt-5" id="gibson-assembly">
                 <h1 className="mb-3">Gibson Assembly - NEB Gibson Assembly Master Mix</h1>
               </div>
               <ol>
@@ -607,8 +596,7 @@ export function Experiments() {
                 <li>Incubate at 50 °C for 1 hour. Following the incubation store at -20 °C.</li>
                 <li>Transform chemically competent cells with 2 μL of the assembly reaction. As per manufacturer instructions, if not using cells from NEB, dilute assembly reaction 4-fold.</li>
               </ol>
-
-              <div className="container-fluid p-3 mt-5" id="part17">
+              <div className="container-fluid p-3 mt-5" id="colony-pcr">
                 <h1 className="mb-3">Colony PCR</h1>
               </div>
               <ol>
@@ -709,8 +697,7 @@ export function Experiments() {
 
                 <li>After completion, visualize PCR products in an agarose gel to confirm correct amplification.</li>
               </ol>
-
-              <div className="container-fluid p-3 mt-5" id="part18">
+              <div className="container-fluid p-3 mt-5" id="sds-page-gel-electrophoresis">
                 <h1 className="mb-3">Induction and SDS-PAGE gel electrophoresis</h1>
               </div>
               <ol>
@@ -732,14 +719,10 @@ export function Experiments() {
                 <li>Transfer to ice and let cool before loading gel.</li>
                 <li>Load gel (15 μL per well). The gel ran at 90 V for 3 hours.</li>
               </ol>
-
-
-              
             </div>
           </div>
         </div>
       </div>
-   
     </>
   );
 }
