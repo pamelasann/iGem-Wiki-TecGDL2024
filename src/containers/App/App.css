@@ -146,6 +146,7 @@ body.no-scroll {
   text-align: center;
   perspective: 500px;
   transform-style: preserve-3d;
+  border: 1px solid var(--lg); /* Add border to the table */
 }
 
 .table table caption {
@@ -157,6 +158,8 @@ body.no-scroll {
   background-color: var(--lg);
   color: var(--dg);
   font-family: Nunito-Bold, sans-serif;
+  border: 1px solid var(--lg); /* Add border to the caption */
+  border-bottom: none; /* Remove bottom border from the caption */
 }
 
 .table table tr {
@@ -249,3 +252,4 @@ body.no-scroll {
   scrollbar-width: thin;
   scrollbar-color: #7975d0 #f1f1f1;
 }
+
