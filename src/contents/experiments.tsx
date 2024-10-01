@@ -1,22 +1,4 @@
-import { useEffect } from 'react';
-import katex from 'katex';
-//import 'katex/dist/katex.min.css'; // Import KaTeX CSS
-
 export function Experiments() {
-  useEffect(() => {
-    // Render KaTeX equations after the component mounts
-    const elements = document.querySelectorAll('.katex-render');
-    elements.forEach((element) => {
-      const latex = element.getAttribute('data-latex');
-      if (latex) {
-        // Type assertion to treat the element as an HTMLElement
-        katex.render(latex, element as HTMLElement, {
-          throwOnError: false,
-        });
-      }
-    });
-  }, []);
-
   return (
     <>
       <div className="container-fluid p-3">
