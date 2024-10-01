@@ -131,7 +131,6 @@ body.no-scroll {
   text-align: center; /* Center the text */
 }
 
-
 /* Table Styles */
 .table {
   width: 100%;
@@ -147,6 +146,7 @@ body.no-scroll {
   text-align: center;
   perspective: 500px;
   transform-style: preserve-3d;
+  border: 1px solid var(--lg); /* Add border to the table */
 }
 
 .table table caption {
@@ -155,15 +155,32 @@ body.no-scroll {
   overflow: hidden;
   font-size: 1em;
   padding: 0.5em 0;
+  background-color: var(--lg);
+  color: var(--dg);
+  font-family: Nunito-Bold, sans-serif;
+  border: 1px solid var(--lg); /* Add border to the caption */
+  border-bottom: none; /* Remove bottom border from the caption */
 }
 
 .table table tr {
   position: relative;
   transition: 0.5s;
+  border-left: 1px solid var(--lg);
+  border-right: 1px solid var(--lg);
+}
+
+.table table tr.head, .table table tr:first-child {
+  color: var(--dg);
+  border-bottom: 1px solid var(--lg);
+}
+
+.table table tr:last-child {
+  border-bottom: 1px solid var(--lg);
 }
 
 .table table tr:hover {
   transform: perspective(500px) translate3d(0, 0, 15px);
+  background-color: var(--lg);
 }
 
 .table table tr.head:hover, .table table tr:first-child:hover {
@@ -204,43 +221,24 @@ body.no-scroll {
   max-width: 18vw;
 }
 
-.table table caption {
-  font-family: Nunito-Bold, sans-serif;
-  color: var(--dg);
-  background-color: var(--lg);
-}
-
-.table table tr {
-  font-family: Nunito-Reg, sans-serif;
-  color: var(--font);
-  border-left: 1px solid var(--lg);
-  border-right: 1px solid var(--lg);
-}
-
-.table table tr.head, .table table tr:first-child {
-  color: var(--dg);
-  border-bottom: 1px solid var(--lg);
-  border-top: 1px solid var(--lg);
-}
-
-.table table tr:last-child {
-  border-bottom: 1px solid var(--lg);
-}
-
-.table table tr:hover {
-  background-color: var(--lg);
-}
-
-.table table tr td:hover {
-  color: var(--y);
-  background-color: var(--mg);
-}
-
 .table table tr td:hover {
   background-color: #ffeeba; /* Highlight color */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   cursor: pointer; /* Change cursor on hover */
 }
+
+.table-title {
+  font-size: 1em; /* Tamaño de fuente */
+  background-color: #7975d5; /* Color de fondo */
+  color: white; /* Color del texto */
+  border-top-left-radius: 8px; /* Bordes redondeados */
+  border-top-right-radius: 8px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interno */
+  text-align: center; /* Centrar el texto */
+  /* Remove hover effect */
+  pointer-events: none;
+}
+
 
 /* Media Queries */
 @media screen and (max-width: 992px) {
@@ -254,3 +252,4 @@ body.no-scroll {
   scrollbar-width: thin;
   scrollbar-color: #7975d0 #f1f1f1;
 }
+
