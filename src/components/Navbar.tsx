@@ -8,9 +8,20 @@ import Pages from "../pages.ts";
 
 export function Navbar() {
   const [expanded, setExpanded] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState({}); // Manage dropdown open states
 
   const handleToggle = () => setExpanded(!expanded);
-  const handleClose = () => setExpanded(false);
+  const handleClose = () => {
+    setExpanded(false);
+    setDropdownOpen({}); // Close all dropdowns
+  };
+
+  const handleDropdownToggle = (index) => {
+    setDropdownOpen((prev) => ({
+      ...prev,
+      [index]: !prev[index], // Toggle the dropdown for this index
+    }));
+  };
 
   const pages = Pages.map((item, pageIndex) => {
     if (item.folder) {
@@ -32,6 +43,8 @@ export function Navbar() {
           key={`page-${pageIndex}`}
           title={item.name}
           id={`basic-nav-dropdown-${pageIndex}`}
+          show={dropdownOpen[pageIndex]} // Control dropdown visibility based on state
+          onClick={() => handleDropdownToggle(pageIndex)} // Toggle dropdown on click
         >
           {folderItems}
         </NavDropdown>
