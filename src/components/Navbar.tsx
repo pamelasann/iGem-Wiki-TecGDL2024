@@ -6,106 +6,43 @@ import { Link } from "react-router-dom";
 import Image from "react-bootstrap/Image";
 import Pages from "../pages.ts";
 
-export function Navbar({ }: { itemSpacing?: string }) {
-  const [hoverIndex, setHoverIndex] = useState<number | null>(null);
-  const [hoverItem, setHoverItem] = useState<number | null>(null);
-  const [showDropdown, setShowDropdown] = useState<boolean>(false);
+export function Navbar() {
+  const [expanded, setExpanded] = useState(false);
 
-  const handleMouseEnter = (index: number) => {
-    setHoverIndex(index);
-    setShowDropdown(true);
-  };
-
-  const handleMouseLeave = () => {
-    setHoverIndex(null);
-    setHoverItem(null); // Reset hoverItem when mouse leaves the dropdown item
-    setShowDropdown(false);
-  };
-
-  const handleItemMouseEnter = (index: number) => {
-    setHoverItem(index);
-  };
-
-  const handleItemMouseLeave = () => {
-    setHoverItem(null);
-  };
+  const handleToggle = () => setExpanded(!expanded);
+  const handleClose = () => setExpanded(false);
 
   const pages = Pages.map((item, pageIndex) => {
-    if ("folder" in item && item.folder) {
-      const folderItems = item.folder.map((subpage, subpageIndex) => {
-        if (subpage.path) {
-          return (
-            <NavDropdown.Item
-              key={`subpage-${pageIndex}-${subpageIndex}`}
-              as={Link}
-              to={subpage.path}
-              style={{
-                margin: "0",
-                fontWeight: "bold",
-                padding: "5px 15px",
-                borderRadius: "25px",
-                background: "#8976ec",
-                color:
-                  hoverIndex === pageIndex && hoverItem === subpageIndex
-                    ? "#82d9b9"
-                    : "white", // Change font color only when both conditions are met
-                transition: "color 0.3s ease-in-out", // Add transition for color change
-              }}
-              onMouseEnter={() => handleItemMouseEnter(subpageIndex)}
-              onMouseLeave={handleItemMouseLeave}
-            >
-              {subpage.name}
-            </NavDropdown.Item>
-          );
-        }
-        return null;
-      });
+    if (item.folder) {
+      const folderItems = item.folder.map((subpage, subpageIndex) => (
+        subpage.path ? (
+          <NavDropdown.Item
+            key={`subpage-${pageIndex}-${subpageIndex}`}
+            as={Link}
+            to={subpage.path}
+            onClick={handleClose}
+          >
+            {subpage.name}
+          </NavDropdown.Item>
+        ) : null
+      ));
 
       return (
-<NavDropdown
-  key={`page-${pageIndex}`}
-  title={item.name}
-  id={`basic-nav-dropdown-${pageIndex}`}
-  show={showDropdown && hoverIndex === pageIndex}
-  onMouseEnter={() => handleMouseEnter(pageIndex)}
-  onMouseLeave={handleMouseLeave}
-  style={{
-    margin: "5px 0",
-    fontWeight: "bold",
-    position: "relative",
-    transition: "opacity 0.3s ease-in-out",
-  }}
->
-  <div
-    style={{
-      display: showDropdown && hoverIndex === pageIndex ? "flex" : "none",
-      borderRadius: "100px",
-      background: "#8976ec",
-      fontSize : "13px",
-      padding: "0px 0",
-      position: "absolute",
-      left: "50%",
-      transform: "translateX(-50%)",
-      margin: "-15px 0",
-      opacity: showDropdown && hoverIndex === pageIndex ? 1 : 0,
-      transition: "opacity 0.3s ease-in-out",
-    }}
-  >
-    {folderItems}
-  </div>
-</NavDropdown>
-
+        <NavDropdown
+          key={`page-${pageIndex}`}
+          title={item.name}
+          id={`basic-nav-dropdown-${pageIndex}`}
+        >
+          {folderItems}
+        </NavDropdown>
       );
-    } else if ("path" in item && item.path) {
+    } else if (item.path) {
       return (
         <Nav.Link
           key={`page-${pageIndex}`}
           as={Link}
           to={item.path}
-          style={{
-            margin: "5px 0",
-            fontWeight: "bold",
-          }}
+          onClick={handleClose}
         >
           {item.name}
         </Nav.Link>
@@ -115,46 +52,49 @@ export function Navbar({ }: { itemSpacing?: string }) {
   });
 
   return (
-    <BootstrapNavbar
-      expand="lg"
-      style={{ backgroundColor: "#e6e5e5", padding: "20px", height: "80px" }}
-      fixed="top"
-    >
-      <div className="container-fluid">
-        <div className="align-items-center pe-2">
-          <a href="https://2024.igem.wiki/tecmonterreygdl/">
+    <>
+      <BootstrapNavbar
+        expand="lg"
+        className="custom-navbar"
+        style={{ backgroundColor: "#e6e5e5", padding: "20px", height: "80px" }}
+        fixed="top"
+        expanded={expanded}
+      >
+        <div className="container-fluid d-flex justify-content-between align-items-center">
+          <div className="d-flex align-items-center">
+            <a href="https://2024.igem.wiki/tecmonterreygdl/">
               <Image
                 src="https://static.igem.wiki/teams/5439/logo.png"
                 alt="Neotech-e"
                 style={{ width: 'auto', height: '3.3em' }}
               />
-          </a>
+            </a>
+            <a href="https://2024.igem.wiki/tecmonterreygdl/" id="logo-link" className="ms-2 d-flex align-items-center">
+              <div id="title-font"
+                style={{
+                  color: "#7975d5",
+                  fontWeight: "bold",
+                  fontSize: "1.8em",
+                }}
+              >
+                Neotech
+              </div>
+              <div style={{ color: "#82d9b9", fontWeight: "bold", fontSize: "1.8em"}} id="title-font">
+                -
+              </div>
+              <div style={{ color: "#82d9b9", fontWeight: "bold", fontSize: "1.8em"}} id="title-font">
+                e
+              </div>
+            </a>
+          </div>
+          <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" onClick={handleToggle} />
+          <BootstrapNavbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+            <button className="navbar-close" onClick={handleClose}>×</button>
+            <Nav className="left-aligned">{pages}</Nav>
+          </BootstrapNavbar.Collapse>
         </div>
-        
-        <a href="https://2024.igem.wiki/tecmonterreygdl/" id="logo-link">
-            <div id="title-font"
-              style={{
-                color: "#7975d5",
-                fontWeight: "bold",
-                marginRight: 0,
-                fontSize: "1.8em",
-                display: "inline-block",
-              }}
-            >
-              Neotech
-            </div>
-            <div style={{ color: "#82d9b9", fontWeight: "bold", fontSize: "1.8em", display: "inline-block"}} id="title-font">
-              -e
-            </div>
-        </a>
-            <BootstrapNavbar.Brand>
-              {import.meta.env.VITE_TEAM_NAME}
-            </BootstrapNavbar.Brand>
-            <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
-            <BootstrapNavbar.Collapse id="basic-navbar-nav">
-              <Nav className="left-aligned">{pages}</Nav>
-            </BootstrapNavbar.Collapse>
-      </div>
-    </BootstrapNavbar>
+      </BootstrapNavbar>
+      {expanded && <div className="custom-navbar navbar-overlay" onClick={handleClose}></div>}
+    </>
   );
 }
