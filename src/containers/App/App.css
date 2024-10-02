@@ -208,25 +208,9 @@ body.no-scroll {
   font-weight: bold;
 }
 /* Navbar styles */
-/* Navbar styles */
 .custom-navbar .nav-link,
 .custom-navbar .dropdown-item {
   transition: color 0.3s ease, background-color 0.3s ease;
-}
-
-/* Dropdown menu styles */
-.custom-navbar .dropdown-menu {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px); /* Start above its position */
-  transition: opacity 0.3s ease, transform 0.3s ease; /* Animate opacity and transform */
-}
-
-
-
-/* Optional: Add some shadow for a 3D effect */
-.custom-navbar .dropdown:hover .dropdown-menu {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -563,4 +547,3 @@ body {
 .go .btn:hover .line::before {
   background-color: #ebdad1; /* Change arrow color to green on hover */
 }
-
