@@ -336,6 +336,98 @@ export function Entrepreneurship() {
               <div className="container-fluid p-3" id="part4.1">
                 <h2>Risk Analysis</h2>
                 {/* TABLA */}
+                <div className="table">
+  <table>
+    <thead>
+      <tr>
+        <th colSpan={5} className="table-title">
+          Table 1. Risk analysis table
+        </th>
+      </tr>
+      <tr>
+        <th>Risk</th>
+        <th>Likelihood (1-5)</th>
+        <th>Impact (1-5)</th>
+        <th>Risk Level (L x I)</th>
+        <th>Mitigation Strategy</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1. Regulatory Changes</td>
+        <td>3</td>
+        <td>5</td>
+        <td>15</td>
+        <td>Stay updated on regulations and engage with regulatory bodies.</td>
+      </tr>
+      <tr>
+        <td>2. Equipment Failure</td>
+        <td>4</td>
+        <td>4</td>
+        <td>16</td>
+        <td>Implement regular maintenance and calibration schedules.</td>
+      </tr>
+      <tr>
+        <td>3. Inadequate Funding</td>
+        <td>3</td>
+        <td>5</td>
+        <td>15</td>
+        <td>Diversify funding sources and apply for grants regularly.</td>
+      </tr>
+      <tr>
+        <td>4. Sample Contamination</td>
+        <td>2</td>
+        <td>5</td>
+        <td>10</td>
+        <td>Train staff in proper sampling techniques and contamination prevention.</td>
+      </tr>
+      <tr>
+        <td>5. Data Security Breach</td>
+        <td>3</td>
+        <td>3</td>
+        <td>9</td>
+        <td>Implement robust cybersecurity measures and regular audits.</td>
+      </tr>
+      <tr>
+        <td>6. Delays in Results Reporting</td>
+        <td>3</td>
+        <td>3</td>
+        <td>9</td>
+        <td>Streamline reporting processes and set clear deadlines.</td>
+      </tr>
+      <tr>
+        <td>7. Low Market Demand for Services</td>
+        <td>2</td>
+        <td>4</td>
+        <td>8</td>
+        <td>Conduct market research and diversify service offerings.</td>
+      </tr>
+      <tr>
+        <td>8. Inaccurate Analysis Results</td>
+        <td>2</td>
+        <td>5</td>
+        <td>10</td>
+        <td>Regular training and quality control checks for laboratory personnel.</td>
+      </tr>
+      <tr>
+        <td>9. Staff Turnover</td>
+        <td>3</td>
+        <td>3</td>
+        <td>9</td>
+        <td>Create a supportive work environment and implement retention strategies.</td>
+      </tr>
+      <tr>
+        <td>10. Negative Publicity</td>
+        <td>2</td>
+        <td>4</td>
+        <td>8</td>
+        <td>Maintain transparency and engage in community outreach.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+                
               </div>
               <div className="container-fluid p-3" id="part4.2">
                 <h2>SDGs</h2>
