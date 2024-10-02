@@ -131,8 +131,24 @@ body.no-scroll {
   text-align: center; /* Center the text */
 }
 
+.custom-navbar .navbar-overlay {
+  background-color: rgba(0, 0, 0, 0.7); /* Darker color with transparency */
+  width: 50%; /* Set width to 50% */
+  position: fixed;
+  top: 80px; /* Position it below the logo */
+  right: 0; /* Keep it stuck to the right */
+  height: calc(100% - 80px); /* Adjust height to fit below the logo */
+  z-index: 1049; /* Ensure it is behind the navbar-collapse */
+  display: block; /* Ensure it's visible */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition */
+}
+
+.custom-navbar .navbar-collapse.show + .navbar-overlay {
+  background-color: rgba(0, 0, 0, 0.7); /* Darker color when expanded */
+}
+
 .custom-navbar .navbar-collapse {
-  background: linear-gradient(to right, #e6e5e5 50%, #b3b3b3 50%); /* Gradient background */
+  background-color: #e6e5e5; /* Set background color for the left half */
   width: 50%; /* Set width to 50% */
   position: fixed;
   top: 80px; /* Position it below the logo */
@@ -167,6 +183,17 @@ body.no-scroll {
   display: block; /* Ensure it's visible by default */
 }
 
+.custom-navbar .navbar-overlay {
+  background-color: #b3b3b3; /* Darker color for the right half */
+  width: 50%; /* Set width to 50% */
+  position: fixed;
+  top: 80px; /* Position it below the logo */
+  right: 0; /* Keep it stuck to the right */
+  height: calc(100% - 80px); /* Adjust height to fit below the logo */
+  z-index: 1049; /* Ensure it is behind the navbar-collapse */
+  display: block; /* Ensure it's visible */
+}
+
 @media (min-width: 992px) {
   .custom-navbar .navbar-collapse {
     position: static;
@@ -178,6 +205,10 @@ body.no-scroll {
     display: block; /* Reset display for desktop view */
   }
 
+  .custom-navbar .navbar-overlay {
+    display: none; /* Hide the overlay on larger screens */
+  }
+
   .custom-navbar .navbar-close {
     display: none; /* Hide the close button on larger screens */
   }
@@ -186,6 +217,7 @@ body.no-scroll {
 body {
   padding-top: 80px; /* Adjust this value based on the height of your navbar */
 }
+
 
 
 /* Table Styles */

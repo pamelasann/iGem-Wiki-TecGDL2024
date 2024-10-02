@@ -52,46 +52,49 @@ export function Navbar() {
   });
 
   return (
-    <BootstrapNavbar
-      expand="lg"
-      className="custom-navbar"
-      style={{ backgroundColor: "#e6e5e5", padding: "20px", height: "80px" }}
-      fixed="top"
-      expanded={expanded}
-    >
-      <div className="container-fluid d-flex justify-content-between align-items-center">
-        <div className="d-flex align-items-center">
-          <a href="https://2024.igem.wiki/tecmonterreygdl/">
-            <Image
-              src="https://static.igem.wiki/teams/5439/logo.png"
-              alt="Neotech-e"
-              style={{ width: 'auto', height: '3.3em' }}
-            />
-          </a>
-          <a href="https4://2024.igem.wiki/tecmonterreygdl/" id="logo-link" className="ms-2 d-flex align-items-center">
-            <div id="title-font"
-              style={{
-                color: "#7975d5",
-                fontWeight: "bold",
-                fontSize: "1.8em",
-              }}
-            >
-              Neotech
-            </div>
-            <div style={{ color: "#82d9b9", fontWeight: "bold", fontSize: "1.8em"}} id="title-font">
-              -
-            </div>
-            <div style={{ color: "#82d9b9", fontWeight: "bold", fontSize: "1.8em"}} id="title-font">
-              e
-            </div>
-          </a>
+    <>
+      <BootstrapNavbar
+        expand="lg"
+        className="custom-navbar"
+        style={{ backgroundColor: "#e6e5e5", padding: "20px", height: "80px" }}
+        fixed="top"
+        expanded={expanded}
+      >
+        <div className="container-fluid d-flex justify-content-between align-items-center">
+          <div className="d-flex align-items-center">
+            <a href="https://2024.igem.wiki/tecmonterreygdl/">
+              <Image
+                src="https://static.igem.wiki/teams/5439/logo.png"
+                alt="Neotech-e"
+                style={{ width: 'auto', height: '3.3em' }}
+              />
+            </a>
+            <a href="https://2024.igem.wiki/tecmonterreygdl/" id="logo-link" className="ms-2 d-flex align-items-center">
+              <div id="title-font"
+                style={{
+                  color: "#7975d5",
+                  fontWeight: "bold",
+                  fontSize: "1.8em",
+                }}
+              >
+                Neotech
+              </div>
+              <div style={{ color: "#82d9b9", fontWeight: "bold", fontSize: "1.8em"}} id="title-font">
+                -
+              </div>
+              <div style={{ color: "#82d9b9", fontWeight: "bold", fontSize: "1.8em"}} id="title-font">
+                e
+              </div>
+            </a>
+          </div>
+          <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" onClick={handleToggle} />
+          <BootstrapNavbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+            <button className="navbar-close" onClick={handleClose}>×</button>
+            <Nav className="left-aligned">{pages}</Nav>
+          </BootstrapNavbar.Collapse>
         </div>
-        <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" onClick={handleToggle} />
-        <BootstrapNavbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-          <button className="navbar-close" onClick={handleClose}>×</button>
-          <Nav className="left-aligned">{pages}</Nav>
-        </BootstrapNavbar.Collapse>
-      </div>
-    </BootstrapNavbar>
+      </BootstrapNavbar>
+      {expanded && <div className="custom-navbar navbar-overlay"></div>}
+    </>
   );
 }
