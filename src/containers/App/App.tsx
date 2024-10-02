@@ -72,10 +72,12 @@ const App = () => {
                 path={path}
                 element={
                   <>
+                  {path !== "/" && (
                     <Header 
                       title={title || ""} 
                       backgroundImage={backgroundImage || undefined} 
                     />
+                  )}
                     <div className="container main-container">
                       <Component />
                     </div>
