@@ -282,7 +282,7 @@ export function Experiments() {
                 </table>
               </div>
 
-                <li>Configure thermocycler according to the length of the amplicon and the annealing temperature of the primers. The annealing temperature was first calculated using <a href="https://tmcalculator.neb.com/#!/main">NEB's Tm calculator</a>, then further optimized experimentally.</li>
+                <li>Configure thermocycler according to the length of the amplicon and the annealing temperature of the primers. The annealing temperature was first calculated using <a href="https://tmcalculator.neb.com/#!/main" target="_blank" rel="noopener noreferrer">NEB's Tm calculator</a>, then further optimized experimentally.</li>
                 {/* Table Section */}
                 <div className="table">
                 <table>
@@ -377,7 +377,7 @@ export function Experiments() {
                 </table>
               </div>
 
-                <li>Configure thermocycler according to the length of the amplicon and the annealing temperature of the primers. The annealing temperature was first calculated using <a href="https://tmcalculator.neb.com/#!/main">NEB's Tm calculator</a>, then further optimized experimentally.</li>
+                <li>Configure thermocycler according to the length of the amplicon and the annealing temperature of the primers. The annealing temperature was first calculated using <a href="https://tmcalculator.neb.com/#!/main" target="_blank" rel="noopener noreferrer">NEB's Tm calculator</a>, then further optimized experimentally.</li>
                 {/* Table Section */}
                 <div className="table">
                 <table>
@@ -649,7 +649,7 @@ export function Experiments() {
               </div>
 
                 <li>Pick an isolated colony with a sterile micropipette tip and place it in the PCR tube for 15 seconds.</li>
-                <li>Configure thermocycler according to the length of the amplicon and the annealing temperature of the primers. The annealing temperature was first calculated using <a href="https://tmcalculator.neb.com/#!/main">NEB's Tm calculator</a>, then further optimized experimentally.</li>
+                <li>Configure thermocycler according to the length of the amplicon and the annealing temperature of the primers. The annealing temperature was first calculated using <a href="https://tmcalculator.neb.com/#!/main" target="_blank" rel="noopener noreferrer">NEB's Tm calculator</a>, then further optimized experimentally.</li>
                 {/* Table Section */}
                 <div className="table">
                 <table>
