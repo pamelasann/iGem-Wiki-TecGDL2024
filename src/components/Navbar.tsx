@@ -47,7 +47,7 @@ export function Navbar({ }: { itemSpacing?: string }) {
                 background: "#8976ec",
                 color:
                   hoverIndex === pageIndex && hoverItem === subpageIndex
-                    ? "#ff00ff"
+                    ? "#82d9b9"
                     : "white", // Change font color only when both conditions are met
                 transition: "color 0.3s ease-in-out", // Add transition for color change
               }}
@@ -81,7 +81,7 @@ export function Navbar({ }: { itemSpacing?: string }) {
       display: showDropdown && hoverIndex === pageIndex ? "flex" : "none",
       borderRadius: "100px",
       background: "#8976ec",
-      fontSize : "12px",
+      fontSize : "13px",
       padding: "0px 0",
       position: "absolute",
       left: "50%",
