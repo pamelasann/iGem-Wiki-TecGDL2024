@@ -369,3 +369,90 @@ body.no-scroll {
 .custom-dropdown-item {
   background-color: #ffffff; /* Set your desired background color */
 }
+
+.go {
+  position: absolute;
+  bottom: 40px; /* Adjust this value to position the button higher */
+  font-family: Nunito-Bold; /* Ensure the same font is used */
+  color: #6d966b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* Adjust the gap between text and button */
+  animation: go 4s linear infinite;
+  z-index: 1; /* Ensure it stays above other elements */
+}
+
+.go p {
+  margin: 0; /* Remove default margin for better alignment */
+  text-align: center; /* Center the text */
+  font-size: 24px; /* Increase text size as needed */
+  line-height: 1.2; /* Adjust line height for better spacing */
+  color: #7975d0; /* Change this to your desired text color */
+  font-family: 'YourFontFamily', sans-serif; /* Ensure it matches the rest of your project */
+  font-weight: bold; /* Make the text bold */
+}
+
+
+@keyframes go {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-20px);
+  }
+}
+
+.go .btn {
+  position: relative;
+  width: 40px; /* Increased size */
+  height: 40px; /* Increased size */
+  border-radius: 50%;
+  background-color: #7975d0; /* Keep purple color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color .6s; /* Ensure smooth transition */
+}
+
+.go .btn:hover {
+  background-color: #7975d0; /* Keep the same color on hover */
+}
+
+.go .btn .line {
+  position: relative;
+  height: 50%; /* Increased size */
+  width: 4px; /* Increased size */
+  background-color: #ffffff; /* White color for the arrow */
+  border-radius: 2px;
+  transition: background-color .6s; /* Ensure smooth transition */
+}
+
+.go .btn .line::after,
+.go .btn .line::before {
+  transition: background-color .6s; /* Ensure smooth transition */
+  display: block;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 4px; /* Increased size */
+  border-radius: 2px;
+  background-color: #ffffff; /* White color for the arrow */
+  transform-origin: bottom;
+  bottom: 0;
+}
+
+.go .btn .line::before {
+  transform: rotate(-45deg);
+}
+
+.go .btn .line::after {
+  transform: rotate(45deg);
+}
+
+.go .btn:hover .line,
+.go .btn:hover .line::after,
+.go .btn:hover .line::before {
+  background-color: #ebdad1; /* Change arrow color to green on hover */
+}
+
