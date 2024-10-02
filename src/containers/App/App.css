@@ -131,6 +131,58 @@ body.no-scroll {
   text-align: center; /* Center the text */
 }
 
+.custom-navbar .navbar-collapse {
+  background-color: #e6e5e5;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: auto; /* Adjust height to fit content */
+  z-index: 1050;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  padding: 20px; /* Add padding for better spacing */
+}
+
+.custom-navbar .navbar-collapse.show {
+  transform: translateX(0);
+}
+
+.custom-navbar .navbar-toggler {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.custom-navbar .navbar-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  display: block; /* Ensure it's visible by default */
+}
+
+@media (min-width: 992px) {
+  .custom-navbar .navbar-collapse {
+    position: static;
+    transform: none;
+    background-color: transparent;
+    height: auto;
+    padding: 0; /* Remove padding for desktop view */
+  }
+
+  .custom-navbar .navbar-close {
+    display: none; /* Hide the close button on larger screens */
+  }
+}
+
+body {
+  padding-top: 80px; /* Adjust this value based on the height of your navbar */
+}
+
 /* Table Styles */
 .table {
   width: 100%;
