@@ -218,12 +218,7 @@ body.no-scroll {
 .custom-navbar .dropdown-item:hover {
   color: #ffffff; /* Change to your desired hover text color */
   background-color: #7975d5; /* Change to your desired hover background color */
-}
-
-/* Optional: Add some shadow for a 3D effect */
-.custom-navbar .nav-link:hover,
-.custom-navbar .dropdown-item:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for a 3D effect */
 }
 
 /* Dropdown menu styles */
@@ -232,6 +227,7 @@ body.no-scroll {
   visibility: hidden;
   transform: translateY(-10px); /* Start above its position */
   transition: opacity 0.3s ease, transform 0.3s ease; /* Animate opacity and transform */
+  display: block; /* Ensure the dropdown menu is always part of the layout */
 }
 
 /* Show dropdown on hover */
@@ -239,7 +235,14 @@ body.no-scroll {
   opacity: 1;
   visibility: visible;
   transform: translateY(0); /* Move to its position */
+  display: block; /* Ensure the dropdown menu is always part of the layout */
 }
+
+/* Optional: Add some shadow for a 3D effect */
+.custom-navbar .dropdown:hover .dropdown-menu {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 
 
 body {
