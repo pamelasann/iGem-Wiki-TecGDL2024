@@ -13,19 +13,19 @@ export function Education() {
                       <a href="#part1.1" className="subtitle">Science and sustainability workshops in collaboration with USUMA</a>
                     </li>
                     <li className="ps-4">
-                      <a href="#part1.2" className="subtitle">Visit to the Santiago River in collaboration with the non-profit organization Un Salto de Vida A.C.</a>
+                      <a href="#part1.2" className="subtitle">Visit to the Santiago River</a>
                     </li>
                     <li className="ps-4">
-                      <a href="#part1.3" className="subtitle">Jeopardy noon</a>
+                      <a href="#part1.3" className="subtitle">Jeopardy Noon</a>
                     </li>
                     <li className="ps-4">
-                      <a href="#part1.4" className="subtitle">Art competition</a>
+                      <a href="#part1.4" className="subtitle">Art Competition</a>
                     </li>
                     <li className="ps-4">
                       <a href="#part1.5" className="subtitle">Visit to ARCHROMA Mexico S. de R.L. de C.V.</a>
                     </li>
                     <li className="ps-4">
-                      <a href="#part1.6" className="subtitle">Educational games in collaboration with Agencia Metropolitana de Bosques Urbanos</a>
+                      <a href="#part1.6" className="subtitle">Educational games</a>
                     </li>
                     <li className="ps-4">
                       <a href="#part1.7" className="subtitle">Creation of Neotech-e Now! Magazine</a>
@@ -40,10 +40,13 @@ export function Education() {
                       <a href="#part1.10" className="subtitle">Participation in Podcast “Jóvenes en movimiento”</a>
                     </li>
                     <li className="ps-4">
-                      <a href="#part1.11" className="subtitle">Participation in Biotechnology and Bioengineering Congress at Tecnologico de Monterrey</a>
+                      <a href="#part1.11" className="subtitle">Participation in Biotechnology and Bioengineering Congress</a>
                     </li>
                     <li className="ps-4">
-                      <a href="#part1.12" className="subtitle">Women in STEM conference in collaboration with Women for the Future</a>
+                      <a href="#part1.111" className="subtitle">Participation in Expo-Engineering 2024</a>
+                    </li>
+                    <li className="ps-4">
+                      <a href="#part1.12" className="subtitle">Women in STEM conference</a>
                     </li>
                     <li className="ps-4">
                       <a href="#part1.13" className="subtitle">IGEM experience: interview with Mara Valverde Rascón</a>
@@ -174,7 +177,7 @@ export function Education() {
                 <br></br>
               </div>
               <div className="container-fluid p-3" id="part1.3">
-                <h2>Jeopardy noon</h2>
+                <h2>Jeopardy Noon</h2>
                 <p>Jeopardy! is a popular trivia game in which participants test their knowledge of a variety of subjects and accumulate points by correctly answering questions with difficulty levels. We carried out a Jeopardy noon at Tecnologico de Monterrey on August 14th, 2024, with students from B.S. in Chemical and Biotechnology Engineering, who had to answer questions about chemistry, molecular biology, sustainability, history, sports and entertainment. We organized this activity to bring together students from different careers and refresh their comprehension of the principles of science, in which collaboration and critical thinking were indispensable skills. </p>
                 <br></br>
                 <div className="d-flex justify-content-center align-items-center">
@@ -196,8 +199,9 @@ export function Education() {
                   <iframe src="https://static.igem.wiki/teams/5439/images-eduandhuman/d3-preguntas-jeopardy.pdf" id="pdf-viewer"></iframe>
                 </div>
               </div>
+              <br></br>
               <div className="container-fluid p-3" id="part1.4">
-                <h2>Jeopardy noon</h2>
+                <h2>Art Competition</h2>
                 <p>Art allows people to explore and reflect upon diverse perspectives, fostering empathy, understanding, and appreciation. It plays a significant role in promoting social change and activism by challenging norms, provoking though, and inspiring actions, as artists often use their work to address relevant social and environmental issues, catalyzing dialogue and mobilizing communities to advocate for positive change. Thus, we organized an art competition through social media, where people from all ages were able to submit their work of art and reflect upon water pollution in Mexico. They were able to represent their perspective and emotions in a creative way, while this allowed us to understand their point of view and how aligned they felt about the objective of the project.</p>
                 <br></br>
                 <p>The winners of the competitions were the following:</p>
@@ -394,6 +398,7 @@ export function Education() {
                   <iframe src="https://static.igem.wiki/teams/5439/images-eduandhuman/d15-revista.pdf" id="pdf-viewer"></iframe>
                 </div>
               </div>
+              <br></br>
               <div className="container-fluid p-3" id="part1.8">
                 <h2>Project exposition with Snakes and Ladders</h2>
                 <p>After implementing the scientific games in Agua Azul and Metropolitano parks, we realized we could create a game that encapsulated the core principles of our project: synthetic biology, emerging contaminants, and sustainable development. We modified the traditional Mexican game of Snakes and Ladders, which features a board with colored squares linked to cards containing questions related to our topics. Players roll a die to move forward based on the number rolled, and they must answer a question corresponding to the square they land on. Along the way, players may encounter ladders that help them advance more quickly or snakes that hinder their progress. </p>
@@ -474,7 +479,7 @@ export function Education() {
                 <br></br>
                 <p>Link: <a href="https://open.spotify.com/episode/1y4Waq0CDJqkNr9elLuqoc?si=EeMzWzCtSSe3rtwvr-Ydcw&nd=1&dlsi=542bbe57c9424c05" target="_blank" rel="noopener noreferrer" id="important-link">Spotify Podcast Episode</a></p>
               </div>
-              <div className="container-fluid p-3" id="part1.10">
+              <div className="container-fluid p-3" id="part1.11">
                 <h2>Participation in Biotechnology and Bioengineering Congress at Tecnologico de Monterrey</h2>
                 <p>We participated in the Biotechnology and Bioengineering Congress that took place on May 24th, in the Tecnologico de Monterrey. Here, we presented our project and its achievements with an audience of almost 50 people, mostly students from B.S. in Biotechnology Engineering. We also talked with iGEM members from previous years and received feedback from them.</p>
                 <br></br>
@@ -502,7 +507,7 @@ export function Education() {
                   </div>
                   <br></br>
               </div>
-              <div className="container-fluid p-3" id="part1.11">
+              <div className="container-fluid p-3" id="part1.111">
                 <h2>Participation in Expo-Engineering 2024 at Tecnologico de Monterrey </h2>
                 <p>We participated in Expo-Engineering 2024 that took place on June 12th, in the Tecnologico de Monterrey. Here, we presented our project and its achievements with an audience of almost 20 people, mostly students from B.S. in Biotechnology, Chemical, Mechanical, and Nanotechnology Engineering from 1st to 8th semester.</p>
                 <br></br>
