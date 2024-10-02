@@ -107,6 +107,14 @@
     transition: font-size 0.3s ease, padding-left 0.3s ease;
 }
 
+#text-content h4 {
+    font-family:'Nunito', Verdana, Helvetica, Arial, sans-serif;
+    font-size: 1.2em;
+    padding-bottom: 0.1em;
+    font-weight: 700 !important;
+    color: #7975d0;
+}
+
 #text-content p {
     font-family: 'Nunito', Verdana, Helvetica, Arial, sans-serif;
     font-size: 1.1em;
