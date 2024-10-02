@@ -94,7 +94,7 @@ export function Navbar() {
           </BootstrapNavbar.Collapse>
         </div>
       </BootstrapNavbar>
-      {expanded && <div className="custom-navbar navbar-overlay"></div>}
+      {expanded && <div className="custom-navbar navbar-overlay" onClick={handleClose}></div>}
     </>
   );
 }
