@@ -92,42 +92,9 @@ const Pages: (Page | Folder)[] = [
         backgroundImage: "https://static.igem.wiki/teams/5439/banner/home.gif", 
       },
     ],
-  },  
-  {
-    name: "HUMAN PRACTICES",
-    title: "Human Practices",
-    path: "/human-practices",
-    component: HumanPractices,
-    backgroundImage: "https://static.igem.wiki/teams/5439/banner/home.gif", 
   },
   {
-    name: "TEAM",
-    folder: [
-      {
-        name: "Team",
-        title: "Team",
-        path: "/team",
-        component: Team,
-        backgroundImage: "https://static.igem.wiki/teams/5439/banner/home.gif", 
-      },
-      {
-        name: "Attributions",
-        title: "Attributions",
-        path: "/attributions",
-        component: Attributions,
-        backgroundImage: "https://static.igem.wiki/teams/5439/banner/home.gif", 
-      },
-    ],
-  },
-  {
-    name: "SAFETY",
-    title: "Safety",
-    path: "/safety",
-    component: Safety,
-    backgroundImage: "https://static.igem.wiki/teams/5439/banner/home.gif", 
-  },
-  {
-    name: "Awards",
+    name: "AWARDS",
     folder: [
       {
         name: "Education",
@@ -184,16 +151,50 @@ const Pages: (Page | Folder)[] = [
         path: "/software",
         component: Software,
         backgroundImage: "https://static.igem.wiki/teams/5439/banner/home.gif", 
-      },
+      }/* ,
       {
         name: "Sustainable",
         title: "Sustainable Development Goals",
         path: "/sustainable",
         component: Sustainable,
         backgroundImage: "https://static.igem.wiki/teams/5439/banner/home.gif", 
+      }*/,
+    ],
+  },  
+  {
+    name: "HUMAN PRACTICES",
+    title: "Human Practices",
+    path: "/human-practices",
+    component: HumanPractices,
+    backgroundImage: "https://static.igem.wiki/teams/5439/banner/home.gif", 
+  },
+  {
+    name: "TEAM",
+    folder: [
+      {
+        name: "Team",
+        title: "Team",
+        path: "/team",
+        component: Team,
+        backgroundImage: "https://static.igem.wiki/teams/5439/banner/home.gif", 
+      },
+      {
+        name: "Attributions",
+        title: "Attributions",
+        path: "/attributions",
+        component: Attributions,
+        backgroundImage: "https://static.igem.wiki/teams/5439/banner/home.gif", 
       },
     ],
   },
+  {
+    name: "SAFETY",
+    title: "Safety",
+    path: "/safety",
+    component: Safety,
+    backgroundImage: "https://static.igem.wiki/teams/5439/banner/home.gif", 
+  },
+
 ];
 
 export default Pages;

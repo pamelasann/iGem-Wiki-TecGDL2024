@@ -366,3 +366,6 @@ body.no-scroll {
   font-weight: bold; /* Highlight active item */
 }
 
+.custom-dropdown-item {
+  background-color: #ffffff; /* Set your desired background color */
+}
