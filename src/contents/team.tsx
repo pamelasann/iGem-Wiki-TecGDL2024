@@ -14,26 +14,7 @@ export function Team() {
 
   const teamSections = [
     {
-      title: 'PI',
-      members: [
-        {
-          name: 'Julio César López Velázquez',
-          role: 'Primary PI',
-          quote: '',
-          imgSrc: 'https://static.igem.wiki/teams/5439/images/team-d/juliolopez.jpeg',
-          linkedIn: 'https://www.linkedin.com/in//',
-        },
-        {
-          name: 'Jorge Donato García García',
-          role: 'Secondary PI',
-          quote: '',
-          imgSrc: 'https://static.igem.wiki/teams/5439/images/team-d/mysteryman.png',
-          linkedIn: 'https://www.linkedin.com/in//',
-        },
-      ],
-    },
-    {
-      title: 'NeoTech-e Staff',
+      title: 'Leaders',
       members: [
         {
           name: 'Enia Verónica Montaño Del Muro',
@@ -253,11 +234,31 @@ export function Team() {
         },
       ],
     },
+    {
+      title: 'Advisors & Supervisors',
+      members: [
+        {
+          name: 'Julio César López Velázquez',
+          role: 'Primary PI',
+          quote: '',
+          imgSrc: 'https://static.igem.wiki/teams/5439/images/team-d/juliolopez.jpeg',
+          linkedIn: 'https://www.linkedin.com/in//',
+        },
+        {
+          name: 'Jorge Donato García García',
+          role: 'Secondary PI',
+          quote: '',
+          imgSrc: 'https://static.igem.wiki/teams/5439/images/team-d/mysteryman.png',
+          linkedIn: 'https://www.linkedin.com/in//',
+        },
+      ],
+    },
   ];
   
 
   return (
     <>
+    <div className="container-fluid p-4"></div>
       {loading && (
         <div style={{
           position: 'fixed',
