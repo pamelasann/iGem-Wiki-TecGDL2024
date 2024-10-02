@@ -93,6 +93,14 @@ const Pages: (Page | Folder)[] = [
       },
     ],
   },
+
+  {
+    name: "HUMAN PRACTICES",
+    title: "Human Practices",
+    path: "/human-practices",
+    component: HumanPractices,
+    backgroundImage: "https://static.igem.wiki/teams/5439/banner/home.gif", 
+  },
   {
     name: "AWARDS",
     folder: [
@@ -116,7 +124,7 @@ const Pages: (Page | Folder)[] = [
         path: "/hardware",
         component: Hardware,
         backgroundImage: "https://static.igem.wiki/teams/5439/banner/home.gif", 
-      },
+      }/*,
       {
         name: "Inclusivity",
         title: "Diversity and Inclusion",
@@ -151,7 +159,7 @@ const Pages: (Page | Folder)[] = [
         path: "/software",
         component: Software,
         backgroundImage: "https://static.igem.wiki/teams/5439/banner/home.gif", 
-      }/* ,
+      } ,
       {
         name: "Sustainable",
         title: "Sustainable Development Goals",
@@ -161,13 +169,6 @@ const Pages: (Page | Folder)[] = [
       }*/,
     ],
   },  
-  {
-    name: "HUMAN PRACTICES",
-    title: "Human Practices",
-    path: "/human-practices",
-    component: HumanPractices,
-    backgroundImage: "https://static.igem.wiki/teams/5439/banner/home.gif", 
-  },
   {
     name: "TEAM",
     folder: [
