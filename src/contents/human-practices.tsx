@@ -112,6 +112,110 @@ export function HumanPractices() {
                 <br></br>
                 <p>Therefore, the use of treated wastewater is being incorporated into agriculture irrigation as a solution to the need for water. Current data shows that 14 of Mexico's 86 irrigation districts use wastewater for agricultural irrigation (either treated or mixed), covering approximately 178,952 hectares. In many of these units, wastewater is combined with well water, with the irrigated area estimated at 166,131.2 hectares. Thus, in 2016, the total area irrigated with reused wastewater for agriculture in Mexico was around 345,083 hectares (IMTA, 2016).</p>
                 {/* TABLE */}
+                <div className="table">
+  <table>
+    <thead>
+      <tr>
+        <th colSpan={4} className="table-title">
+          Table 1. Irrigation districts where wastewater is reused for the cultivation of a variety of crops (IMTA, 2016)
+        </th>
+      </tr>
+      <tr>
+        <th>Irrigation District</th>
+        <th>Owned Surface (ha)</th>
+        <th>Surface Irrigated with Wastewater (ha)</th>
+        <th>Main Crops</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>D.R.003 Tula, Hgo.</td>
+        <td>52,270</td>
+        <td>43,564</td>
+        <td>From O-I: oats and forage barley and wheat grain; of P-V: corn, grain and beans, and of perennials: alfalfa and grasses.</td>
+      </tr>
+      <tr>
+        <td>D.R. 100 Alfajayucan, Hgo.</td>
+        <td>32,118</td>
+        <td>21,103</td>
+        <td>From O-I: forage oats; from P-V: corn grain, zucchini and chili, and perennials: alfalfa.</td>
+      </tr>
+      <tr>
+        <td>D.R. 030 Valsequillo, Pue.</td>
+        <td>33,206</td>
+        <td>21,000</td>
+        <td>P-V: corn and grain sorghum and perennials: alfalfa.</td>
+      </tr>
+      <tr>
+        <td>D.R. 009 Valle de Juárez, Chih.</td>
+        <td>24,492</td>
+        <td>11,500</td>
+        <td>From O-I: wheat grain, from P-V: cotton, from perennials: alfalfa, and second crops: forage sorghum.</td>
+      </tr>
+      <tr>
+        <td>D.R. 088 Chiconautla, Edo. de Méx.</td>
+        <td>4,490</td>
+        <td>1,200</td>
+        <td>From O-I: forage oats; from P-V: corn grain, and perennials: alfalfa.</td>
+      </tr>
+      <tr>
+        <td>D.R. 016 Morelos</td>
+        <td>33,768</td>
+        <td>15,000</td>
+        <td>From O-I: corn grain, onion and zucchini; of P-V: grain corn, rice and green beans; of perennials: sugar cane and mango, and second crops: corn grain, jicama and rice.</td>
+      </tr>
+      <tr>
+        <td>D.R. 020 Morelia-Queréndaro, Mich.</td>
+        <td>20,665</td>
+        <td>16,702</td>
+        <td>From O-I: wheat and fodder oats; from P-V: corn and grain sorghum, and perennials: alfalfa.</td>
+      </tr>
+      <tr>
+        <td>D.R. 025 Bajo Río Bravo, Tamp.</td>
+        <td>248,391.48</td>
+        <td>27,000</td>
+        <td>From O-I: corn, from P-V: grain sorghum, and from perennials: buffel grass.</td>
+      </tr>
+      <tr>
+        <td>D.R. 001 Pabellón, Ags.</td>
+        <td>11,800</td>
+        <td>5,825</td>
+        <td>From O-I: forage oats and grasses; of PV: corn, grain and vegetables; of perennials: alfalfa, and second crops: corn grain.</td>
+      </tr>
+      <tr>
+        <td>D.R. 052 Durango</td>
+        <td>22,922.6</td>
+        <td>2,700</td>
+        <td>From O-I: oats and wheat grain; from P-V: grain corn and forage corn and perennials: walnut and alfalfa.</td>
+      </tr>
+      <tr>
+        <td>D.R. 031 Las Lajas, N.L.</td>
+        <td>3,693</td>
+        <td>1,918</td>
+        <td>From P-V: grain sorghum and from perennials: buffel grass.</td>
+      </tr>
+      <tr>
+        <td>D.R. 066 Santo Domingo, BCS</td>
+        <td>38,101</td>
+        <td>4,734</td>
+        <td>From O-I: chickpea and wheat grain; from P-V: grain corn and beans; of perennials: alfalfa, orange and asparagus.</td>
+      </tr>
+      <tr>
+        <td>D.R. 085 La Begoña, Gto.</td>
+        <td>10,823.0</td>
+        <td>3,874.0</td>
+        <td>From O-I: carrot, barley and wheat grain; from P-V: sorghum and corn, grain and beans; of perennials: alfalfa, and second crops: grain sorghum.</td>
+      </tr>
+      <tr>
+        <td>D.R. 112 Ajacuba, Hgo.</td>
+        <td>4,855.0</td>
+        <td>2,832.0</td>
+        <td>From O-I: oats and fodder barley; from PV: grain corn and from perennials: alfalfa.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
                 <br></br>
                 <div className="d-flex justify-content-center align-items-center">
                   <img src="https://static.igem.wiki/teams/5439/images-eduandhuman/fig3-integrated.png" id="simple-image"></img>
