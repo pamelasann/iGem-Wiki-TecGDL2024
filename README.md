@@ -1,9 +1,9 @@
 # Team TecMonterreyGDL 2024 Wiki
 
-This repository contains the 2024 iGEM competition project by the TecMonterreyGDL team *Neotech-e*  at Instituto Tecnológico y de Estudios Superiores de Monterrey. 
+This repository contains the 2024 iGEM competition project by the TecMonterreyGDL team *Neotech-e* at Tecnológico de Monterrey Campus Guadalajara. 
 
 > [!NOTE]  
-> Please note that the full project is hosted on our GitLab repository. You can visit our project website [here](https://2024.igem.wiki/tecmonterreygdl/).
+> Please note that the full project is hosted on our GitLab repository. You can visit our project website at [https://2024.igem.wiki/tecmonterreygdl](https://2024.igem.wiki/tecmonterreygdl/).
 
 
 ## Installation
